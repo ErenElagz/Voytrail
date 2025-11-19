@@ -8,8 +8,10 @@ export default class Hero extends Component {
     return (
       <div className="flex w-full flex-col justify-center max-w-7xl px-4 mt-10 mb-20 gap-4 md:gap-16 md:flex-row">
         <div className="flex flex-col items-start px-4 mt-10">
-          <h1 className="text-8xl font-bold text-zinc-900 mb-4">Linktree, Rebuilt for the Hospitality World.</h1>
-          <p className="text-lg text-zinc-700 mb-6">
+          <h1 className="text-8xl font-bold text-zinc-900 mb-4 leading">
+            Linktree, Rebuilt for the <span className="text-sky-800 underline">Hospitality</span> World.
+          </h1>
+          <p className="text-lg text-zinc-700 mb-6 ">
             Everything your hostel or hotel needs to stand out online in one simple platform.
           </p>
           <div className="flex gap-4">
@@ -27,7 +29,7 @@ export default class Hero extends Component {
             src="/hero.png"
             alt="Hero Image"
             width={650}
-            className="mt-10 md:mt-0 rounded-4xl shadow-2xl border-2 border-black"
+            className="rounded-4xl shadow-2xl border-2 border-black"
             height={300}
           />
         </div>
