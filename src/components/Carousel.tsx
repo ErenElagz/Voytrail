@@ -9,11 +9,10 @@ const Carousel: React.FC = () => {
 
   React.useEffect(() => {
     if (emblaApi) {
-      // Optional: Add event listeners or other Embla API interactions here
-      // For example, to log current slide index on change:
-      emblaApi.on('select', () => {
-        console.log('Current slide index:', emblaApi.selectedScrollSnap());
-      });
+      const autoplay = setInterval(() => {
+        emblaApi.scrollNext();
+      }, 5000);
+      return () => clearInterval(autoplay);
     }
   }, [emblaApi]);
 
@@ -21,9 +20,9 @@ const Carousel: React.FC = () => {
     <div className="embla overflow-hidden w-full mx-auto my-15">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container flex">
-          <div className="embla__slide flex-shrink-0 justify-evenly  flex-grow-0 basis-full px-20 py-12 min-w-0 bg-blue-100 flex items-center justify-center text-4xl font-bold">
-            <span className="text-7xl font-bold leading-tighter tracking-tight text-sky-800">
-              Create House <br /> Rules <span className="text-sky-600">and</span>
+          <div className="embla__slide flex-shrink-0 justify-evenly flex-grow-0 basis-full px-20 py-12 min-w-0 bg-teal-800 flex items-center justify-center text-4xl font-bold">
+            <span className="text-7xl font-bold leading-tighter tracking-tight text-teal-100">
+              Create House <br /> Rules <span className="text-teal-200">and</span>
               <br /> Made Event <br /> Schedule
             </span>
             <Image
@@ -35,10 +34,10 @@ const Carousel: React.FC = () => {
             />
           </div>
 
-          <div className="embla__slide flex-shrink-0  justify-evenly flex-grow-0 basis-full px-20 py-12 min-w-0 bg-blue-100 flex items-center justify-center text-4xl font-bold">
-            <span className="text-7xl font-bold leading-tighter tracking-tight text-sky-800">
+          <div className="embla__slide flex-shrink-0  justify-evenly flex-grow-0 basis-full px-20 py-12 min-w-0 bg-lime-300 flex items-center justify-center text-4xl font-bold">
+            <span className="text-7xl font-bold leading-tighter tracking-tight text-lime-900">
               Share Your <br /> Activites, Links
-              <br /> <span className="text-sky-600">and</span> more...
+              <br /> <span className="text-lime-700">and</span> more...
             </span>
 
             <Image
@@ -50,9 +49,9 @@ const Carousel: React.FC = () => {
             />
           </div>
 
-          <div className="embla__slide flex-shrink-0  justify-evenly flex-grow-0 basis-full px-20 py-12 min-w-0 bg-blue-100 flex items-center justify-center text-4xl font-bold">
-            <span className="text-7xl font-bold leading-tighter tracking-tight text-sky-800">
-              Analyze Your <br /> Guests <span className="text-sky-600">and</span>
+          <div className="embla__slide flex-shrink-0  justify-evenly flex-grow-0 basis-full px-20 py-12 min-w-0 bg-indigo-600 flex items-center justify-center text-4xl font-bold">
+            <span className="text-7xl font-bold leading-tighter tracking-tight text-indigo-50">
+              Analyze Your <br /> Guests <span className="text-indigo-200">and</span>
               <br /> Grow Your <br /> Bookings
             </span>
 
