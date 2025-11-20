@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from 'react';
+import React from 'react';
 import { Icon } from '@iconify/react';
 import '@/styles/globals.css';
 import useEmblaCarousel from 'embla-carousel-react';
