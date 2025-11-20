@@ -38,10 +38,8 @@ export default class Compares extends Component {
       },
     ];
     return (
-      <div className=" w-full max-w-[1000px] flex flex-col mt-10">
-        <div className=" w-full flex items-center">
-          <span className=" text-4xl font-black text-zinc-700">Compare with other platforms</span>
-        </div>
+      <div className=" w-7xl flex flex-col my-20">
+        <h2 className="text-4xl font-black text-gray-800 mb-4 text-center">Compare with other platforms</h2>
         <div className="relative overflow-x-auto bg-neutral-primary shadow-xs rounded-base border border-default my-6">
           <table className="w-full text-sm text-left rtl:text-right text-body">
             <thead className="text-sm text-body border-b border-default">

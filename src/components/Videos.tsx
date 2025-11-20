@@ -10,7 +10,7 @@ export default function Videos() {
   ];
 
   return (
-    <div className="w-7xl mx-auto py-16">
+    <div className="w-7xl mx-auto my-20">
       <h2 className="text-4xl font-black text-gray-800 mb-4">Watch How it is Works?</h2>
 
       <div className="flex gap-2">

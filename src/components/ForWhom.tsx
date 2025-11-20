@@ -53,15 +53,15 @@ export default class ForWhom extends Component {
     ];
 
     return (
-      <div className=" w-7xl flex flex-col mt-10">
+      <div className=" w-7xl flex flex-col my-20">
         <h2 className="text-4xl font-black text-gray-800 mb-4">For Whom?</h2>
         <div className=" flex justify-center items-center gap-3">
           {data.map((item, index) => (
             <div
               key={index}
-              className="w-full bg-gray-900 rounded-3xl flex flex-col items-center justify-center p-2 border-2 border-sky-100 hover:scale-101 hover:shadow-sm transition-all duration-300"
+              className="w-full bg-gray-900 rounded-4xl flex flex-col items-center justify-center p-2 border-2 border-sky-100 hover:scale-101 hover:shadow-sm transition-all duration-300"
             >
-              <Image src={item.image} width={300} height={200} alt={item.title} className=" rounded-2xl mb-5" />
+              <Image src={item.image} width={300} height={200} alt={item.title} className=" rounded-3xl mb-5" />
               <span className="text-3xl font-bold text-gray-300 mb-2 w-full px-3">{item.title}</span>
               <p className="text-gray-300 text-justify px-3">{item.description}</p>
               <ul className=" list-disc list-inside text-sky-600 mt-4 mb-6 w-full px-3">

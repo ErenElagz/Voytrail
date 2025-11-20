@@ -7,46 +7,63 @@ export default class Features extends Component {
   render() {
     const data = [
       {
-        title: 'What is Lorem Ipsum?',
+        title: 'Unified Guest Hub',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          'Voytrail replaces scattered PDFs, WhatsApp messages, and outdated house manuals with a single, dynamic hub containing check-in instructions, house rules, Wi-Fi, guides, events, and everything a guest needs.',
       },
       {
-        title: 'Where does it come from?',
+        title: 'Modular System Built for Real Hosts',
         description:
-          'Quisque eget luctus mi, vehicula mollis lorem. Proin fringilla vel erat quis sodales. Nam ex enim, eleifend venenatis lectus vitae, accumsan auctor mi.',
+          'Unlike generic link builders, every section is a real module: House Info, Directions, Events, Local Tips, Add-Ons, Room Details, Emergency Info, and more. Hosts activate only what they need and customize the order.',
       },
       {
-        title: 'Why do we use it?',
+        title: 'Live Updates Without Re-Sending Anything',
         description:
-          'Suspendisse massa risus, pretium id interdum in, dictum sit amet ante. Fusce vulputate purus sed tempus feugiat.',
+          'Hosts edit any detail and guests instantly see the change. No re-sending links, PDFs, or instructions. One link. Always up to date.',
+      },
+      {
+        title: 'Analytics That Actually Matter',
+        description:
+          'Voytrail shows what guests view, what they ignore, and where they drop off. Hosts finally understand guest behavior instead of guessing.',
+      },
+      {
+        title: 'Frictionless Guest Experience',
+        description:
+          'Guests don’t install apps or log in. They open one clean page with every detail structured properly. Zero confusion. Zero searching.',
+      },
+      {
+        title: 'QR-Ready for Rooms and Properties',
+        description:
+          'Every module and every page generates QR codes for physical placement inside rooms, lobbies, or common areas. Offline signage becomes interactive instantly.',
       },
     ];
+
     return (
-      <div className="flex w-full max-w-7xl flex-col justify-center px-4 mt-10 mb-20 gap-4 md:gap-16 md:flex-row">
-        <div className="flex flex-col gap-6 md:w-1/2">
-          <span className=" text-4xl font-black text-zinc-700">What can do with Voytrail?</span>
-          <Accordion className="w-full" transition transitionTimeout={200}>
+      <div className="flex w-7xl flex-col my-20 gap-4 md:gap-16 md:flex-row justify-between items-center">
+        <div className="flex flex-col gap-2 md:w-1/2">
+          <h2 className="text-4xl font-black text-gray-800 mb-4">For Whom?</h2>
+          <Accordion className="w-full" transition transitionTimeout={1000}>
             {data.map((item, index) => (
-              <AccordionItem
+              <AccordionItem 
                 key={index}
                 header={item.title}
-                className="mb-4 p-4 border-2 border-gray-300 rounded-xl hover:border-gray-400 "
+                className={({ isEnter }) =>
+                  `w-full rounded-2xl border-1 p-4 mb-2  ${isEnter ? 'border-slate-400 bg-slate-100' : 'border-slate-300 bg-slate-50'}`
+                }
                 buttonProps={{
-                  className: ({ isEnter }) =>
-                    `flex w-full text-left text-xl font-bold ${isEnter && 'text-sky-950'}`,
+                  className: ({ isEnter }) => `flex w-full text-left text-xl font-bold ${isEnter ? 'text-slate-800 ' : 'text-slate-500 '}`,
                 }}
               >
-                <p className="mt-4 text-gray-700 text-justify">{item.description}</p>
+                <p className="pt-2 text-gray-700 text-justify">{item.description}</p>
               </AccordionItem>
             ))}
           </Accordion>
         </div>
-        <div>
+        <div className="md:w-1/2 flex justify-center items-center">
           <Image
             src="/hero.png"
             alt="Hero Image"
-            width={250}
+            width={300}
             className="rounded-4xl shadow-2xl border-2 border-black"
             height={300}
           />
