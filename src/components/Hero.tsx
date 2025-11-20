@@ -19,9 +19,7 @@ export default class Hero extends Component {
               <Icon icon="mdi:rocket-launch" width="20" height="20" className="inline-block mr-2" />
               Get Started
             </button>
-            <button className="hover:underline transition text-zinc-900 font-medium py-3 px-2">
-              Learn More
-            </button>
+            <button className="hover:underline transition text-zinc-900 font-medium py-3 px-2">Learn More</button>
           </div>
         </div>
         <div>
@@ -29,7 +27,7 @@ export default class Hero extends Component {
             src="/hero.png"
             alt="Hero Image"
             width={650}
-            className="rounded-4xl shadow-2xl border-2 border-black"
+            className="rounded-4xl shadow-2xl border-2 border-black pointer-events-none"
             height={300}
           />
         </div>
