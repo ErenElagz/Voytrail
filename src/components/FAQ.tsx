@@ -45,10 +45,7 @@ export default function FAQ() {
 
         <div className="flex flex-col gap-6">
           {faqs.map((faq) => (
-            <div
-              key={faq.id}
-              className={`${faq.color} rounded-3xl shadow-lg transition-all overflow-hidden`}
-            >
+            <div key={faq.id} className={`${faq.color} rounded-3xl shadow-lg transition-all overflow-hidden`}>
               <button
                 onClick={() => toggleItem(faq.id)}
                 className="w-full p-6 flex items-center justify-between text-left font-bold text-gray-800 hover:opacity-90"
