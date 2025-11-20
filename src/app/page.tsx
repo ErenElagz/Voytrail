@@ -1,6 +1,20 @@
 'use client';
 
-import { NavBar, Hero, Footer, Companies, Carousel} from '@/components';
+import {
+  NavBar,
+  Hero,
+  Companies,
+  Carousel,
+  Videos,
+  ForWhom,
+  Features,
+  Footer,
+  Compares,
+  Pricing,
+  Newsletter,
+  FAQ,
+  Testimonials,
+} from '@/components';
 
 export default function Home() {
   return (
@@ -9,6 +23,14 @@ export default function Home() {
       <Hero />
       <Companies />
       <Carousel />
+      <Videos />
+      <ForWhom />
+      <Features />
+      <Compares />
+      <Pricing />
+      <Testimonials />
+      <Newsletter />
+      <FAQ />
       <Footer />
     </div>
   );
