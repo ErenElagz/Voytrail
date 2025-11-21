@@ -34,16 +34,9 @@ export default function Newsletter() {
   };
 
   return (
-    <div className="w-full max-w-[1000px] flex flex-col mt-10 mx-auto">
-      <div className="w-full bg-gradient-to-r from-sky-900 to-blue-900 rounded-3xl overflow-hidden shadow-lg">
+    <div className="w-full max-w-[1000px] flex flex-col my-20 mx-auto">
+      <div className="w-full bg-gradient-to-r from-sky-950 to-blue-950 rounded-3xl overflow-hidden shadow-lg">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center p-8 md:p-12">
-          {/* Image Section */}
-          <div className="flex justify-center">
-            <div className="relative w-full h-64 md:h-80">
-              <Image src="/newsletter.png" alt="Newsletter" fill className="object-contain" priority />
-            </div>
-          </div>
-
           {/* Content Section */}
           <div className="flex flex-col justify-center gap-4">
             <h2 className="text-4xl md:text-5xl font-black text-white">Stay Updated</h2>
@@ -80,6 +73,13 @@ export default function Newsletter() {
             </form>
 
             <p className="text-xs text-sky-200 mt-2">We respect your privacy. Unsubscribe at any time.</p>
+          </div>
+
+          {/* Image Section */}
+          <div className="flex justify-center">
+            <div className="relative w-full h-64 md:h-80">
+              <Image src="/newsletter.png" alt="Newsletter" fill className="object-contain" priority />
+            </div>
           </div>
         </div>
       </div>

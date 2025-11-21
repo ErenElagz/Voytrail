@@ -37,6 +37,8 @@ export default class Compares extends Component {
         features: ['Free Wi-Fi', '24/7 Customer Support'],
       },
     ];
+
+    
     return (
       <div className=" w-7xl flex flex-col my-20">
         <h2 className="text-4xl font-black text-gray-800 mb-4 text-center">Compare with other platforms</h2>
