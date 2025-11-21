@@ -20,7 +20,7 @@ const Carousel: React.FC = () => {
     <div className="embla overflow-hidden w-full mx-auto my-15">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container flex">
-          <div className="embla__slide flex-shrink-0 justify-evenly flex-grow-0 basis-full px-20 py-12 min-w-0 bg-teal-800 flex items-center justify-center text-4xl font-bold">
+          <div className="embla__slide  flex-shrink-0 justify-evenly flex-grow-0 basis-full px-20 py-12 min-w-0 bg-teal-800 flex items-center justify-center text-4xl font-bold">
             <span className="text-7xl font-bold leading-tighter tracking-tight text-teal-100">
               Create House <br /> Rules <span className="text-teal-200">and</span>
               <br /> Made Event <br /> Schedule
@@ -30,7 +30,7 @@ const Carousel: React.FC = () => {
               alt="Carousel Image 1"
               width={600}
               height={400}
-              className="pointer-events-none select-none"
+              className="pointer-events-none select-none shadow-lg overflow-visible"
             />
           </div>
 

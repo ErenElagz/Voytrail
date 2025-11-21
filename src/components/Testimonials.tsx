@@ -46,12 +46,12 @@ export default function Testimonials() {
   ];
 
   return (
-    <div className="w-full bg-gray-50 py-24 px-4">
+    <div className="w-full bg-gray-100 py-24 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="flex items-start justify-between gap-8 mb-16">
-          <div className="flex-1">
-            <div className="flex items-center gap-2 mb-4">
+          <div className="">
+            <div className="flex items-center justify-start  gap-2 mb-4 border-2 border-gray-300 p-2 rounded-full">
               <Icon icon="mdi:flag-outline" width={20} height={20} className="text-gray-600" />
               <span className="text-sm font-semibold text-gray-700 uppercase tracking-wide">Testimonials</span>
             </div>
