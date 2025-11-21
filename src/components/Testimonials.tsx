@@ -50,12 +50,12 @@ export default function Testimonials() {
   ];
 
   return (
-    <div className="w-full bg-gradient-to-r from-lime-300 via-lime-400 to-lime-300 py-16 px-4 my-20">
+    <div className="w-full bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-300 py-16 px-4 my-20">
       <div className="w-7xl mx-auto">
         {/* Title Section */}
-        <div className="flex items-center gap-3 mb-8">
-          <Icon icon="game-icons:laurel-crown" width={60} height={60} className="text-gray-800" />
-          <h2 className="text-4xl font-black text-gray-800">Testimonials</h2>
+        <div className="flex items-center gap-3 mb-8 tracking-tighter">
+          <Icon icon="game-icons:laurel-crown" width={48} height={48} className="text-gray-800" />
+          <h2 className="text-4xl font-extrabold text-gray-800">Testimonials</h2>
         </div>
 
         {/* Testimonials Grid */}
@@ -63,11 +63,11 @@ export default function Testimonials() {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className=" bg-lime-900 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-101"
+              className=" bg-indigo-900 rounded-3xl overflow-hidden p-2 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-101"
             >
               {/* Testimonial Image */}
               <div className="relative h-48 w-full">
-                <Image src={testimonial.image} alt={testimonial.role} fill className="object-cover" />
+                <Image src={testimonial.image} alt={testimonial.role} fill className="object-cover rounded-2xl" />
               </div>
 
               {/* Testimonial Content */}

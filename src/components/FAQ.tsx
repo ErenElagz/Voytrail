@@ -10,41 +10,38 @@ export default class FAQ extends React.Component {
   render() {
     const data = [
       {
-        title: 'Unified Guest Hub',
+        title: 'What is Voytrail?',
         description:
-          'Voytrail replaces scattered PDFs, WhatsApp messages, and outdated house manuals with a single, dynamic hub containing check-in instructions, house rules, Wi-Fi, guides, events, and everything a guest needs.',
+          'Voytrail is a unified guest hub platform designed for hosts to provide guests with all necessary information in one dynamic location, enhancing the guest experience and streamlining host operations.',
       },
       {
-        title: 'Modular System Built for Real Hosts',
+        title: 'How does Voytrail work?',
         description:
-          'Unlike generic link builders, every section is a real module: House Info, Directions, Events, Local Tips, Add-Ons, Room Details, Emergency Info, and more. Hosts activate only what they need and customize the order.',
+          'Voytrail provides hosts with a customizable platform where they can create a dynamic hub containing check-in instructions, house rules, Wi-Fi details, local guides, events, and more. Guests can access this information through a single link or QR code, ensuring they have everything they need at their fingertips.',
       },
       {
-        title: 'Live Updates Without Re-Sending Anything',
+        title: 'What features does Voytrail offer?',
         description:
-          'Hosts edit any detail and guests instantly see the change. No re-sending links, PDFs, or instructions. One link. Always up to date.',
+          'Voytrail offers a comprehensive guest hub, modular system for hosts, live updates, detailed analytics, a frictionless guest experience, and QR code generation for easy access to information.',
       },
       {
-        title: 'Analytics That Actually Matter',
+        title: 'Is Voytrail free to use?',
         description:
-          'Voytrail shows what guests view, what they ignore, and where they drop off. Hosts finally understand guest behavior instead of guessing.',
+          'Voytrail offers a free plan with essential features. For more advanced features and capabilities, we offer premium plans that can be explored on our Pricing page.',
       },
       {
-        title: 'Frictionless Guest Experience',
+        title: 'How can I get started with Voytrail?',
         description:
-          'Guests don’t install apps or log in. They open one clean page with every detail structured properly. Zero confusion. Zero searching.',
-      },
-      {
-        title: 'QR-Ready for Rooms and Properties',
-        description:
-          'Every module and every page generates QR codes for physical placement inside rooms, lobbies, or common areas. Offline signage becomes interactive instantly.',
+          'Getting started with Voytrail is easy! Simply sign up on our website, choose a plan that suits your needs, and start creating your unified guest hub today.',
       },
     ];
 
     return (
-      <div className="flex w-7xl flex-col my-20 gap-4 md:gap-16 md:flex-row justify-between items-center">
-        <h2 className="text-4xl font-black text-gray-800 mb-6">Features</h2>
-        <Accordion transition transitionTimeout={400}>
+      <div className=" w-7xl flex-col my-20 gap-4 md:gap-16 items-center">
+        <h2 className="text-4xl font-black text-gray-800 mb-6 text-center">Features</h2>
+        <Accordion transition transitionTimeout={400} 
+          className='w-2/3 mx-auto'
+        >
           {data.map((item, index) => (
             <AccordionItem
               key={index}

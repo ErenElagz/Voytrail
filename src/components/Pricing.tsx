@@ -15,7 +15,7 @@ export default function Pricing() {
       yearlyPrice: 'Free',
       badge: null,
       bgColor: 'bg-gray-50 border-2 border-gray-200',
-      textColor: 'text-blue-600',
+      textColor: 'text-slate-800',
       buttonBg: 'bg-blue-100 hover:bg-blue-200 text-blue-600',
       badgeBg: null,
       features: [
@@ -30,12 +30,12 @@ export default function Pricing() {
     {
       id: 'basic',
       name: 'Basic',
-      monthlyPrice: '6.49€',
-      yearlyPrice: '64.90€',
+      monthlyPrice: '€9.99',
+      yearlyPrice: '€64.90',
       badge: null,
-      bgColor: 'bg-lime-100 border-2 border-lime-200',
-      textColor: 'text-blue-600',
-      buttonBg: 'bg-blue-600 hover:bg-blue-700 text-white',
+      bgColor: 'bg-gray-100 border-2 border-gray-200',
+      textColor: 'text-slate-800',
+      buttonBg: 'bg-slate-600 hover:bg-slate-700 text-white',
       badgeBg: null,
       features: [
         { name: 'Full Analytics', tooltip: 'Comprehensive analytics' },
@@ -49,13 +49,13 @@ export default function Pricing() {
     {
       id: 'premium',
       name: 'Premium',
-      monthlyPrice: '29.99€',
-      yearlyPrice: '299.90€',
+      monthlyPrice: '€29.99',
+      yearlyPrice: '€299.99',
       badge: 'Most Popular',
-      bgColor: 'bg-blue-600 shadow-2xl transform scale-105',
+      bgColor: 'bg-linear-to-br from-indigo-600 to-indigo-800 shadow-2xl transform scale-103',
       textColor: 'text-white',
-      buttonBg: 'bg-white hover:bg-gray-100 text-blue-600',
-      badgeBg: 'bg-blue-800',
+      buttonBg: 'bg-white hover:bg-indigo-100 text-indigo-950',
+      badgeBg: 'bg-indigo-950 shadow-lg ',
       features: [
         { name: 'Full Analytics', tooltip: 'Enterprise analytics' },
         { name: 'User Behavior Insights', tooltip: 'Advanced user tracking' },
@@ -71,9 +71,9 @@ export default function Pricing() {
       monthlyPrice: 'Custom',
       yearlyPrice: 'Custom',
       badge: null,
-      bgColor: 'bg-lime-400 border-2 border-lime-500',
-      textColor: 'text-gray-900',
-      buttonBg: 'bg-gray-900 hover:bg-gray-800 text-white',
+      bgColor: 'bg-linear-to-br from-slate-800 to-slate-950 ',
+      textColor: 'text-gray-100',
+      buttonBg: 'bg-gray-900 hover:bg-gray-100 text-white',
       badgeBg: null,
       features: [
         { name: 'Full Analytics', tooltip: 'Custom analytics' },
@@ -90,45 +90,43 @@ export default function Pricing() {
     <div className="w-full bg-gradient-to-b from-white to-gray-50 py-24 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="flex justify-between items-start mb-16">
+        <div className="w-full flex flex-col items-center gap-4 mb-10">
           <div>
-            <h1 className="text-7xl font-black text-gray-900 border-b-4 border-gray-900 pb-3 inline-block">
-              Pricing Plans
-            </h1>
+            <h1 className="text-4xl font-black text-slate-800 underline">Pricing</h1>
           </div>
 
           {/* Billing Toggle */}
-          <div className="flex gap-2 items-center bg-gray-100 rounded-full p-1 shadow-md">
+          <div className="flex justify-start items-center bg-gray-100 border-2 border-gray-200 rounded-full">
             <button
               onClick={() => setBillingPeriod('monthly')}
               className={`px-6 py-2 font-bold rounded-full transition-all duration-300 ${
                 billingPeriod === 'monthly' ? 'text-gray-900 bg-white shadow-md' : 'text-gray-600 hover:text-gray-900'
               }`}
             >
-              monthly
+              Monthly
             </button>
             <button
               onClick={() => setBillingPeriod('yearly')}
               className={`px-6 py-2 rounded-full font-bold transition-all duration-300 ${
-                billingPeriod === 'yearly' ? 'bg-gray-900 text-white shadow-md' : 'text-gray-600 hover:text-gray-900'
+                billingPeriod === 'yearly' ? 'bg-slate-800 text-white shadow-lg' : 'text-gray-600 hover:text-gray-900'
               }`}
             >
-              yearly
+              Yearly<span className="ml-2 text-sm font-semibold text-gray-400">(20% off)</span>
             </button>
           </div>
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-cols-4 gap-4">
           {plans.map((plan) => (
             <div
               key={plan.id}
-              className={`relative ${plan.bgColor} rounded-4xl p-8 transition-transform hover:scale-105`}
+              className={`relative ${plan.bgColor} rounded-4xl p-8 transition-transform hover:scale-101`}
             >
               {/* Badge */}
               {plan.badge && (
                 <div
-                  className={`absolute -top-4 left-1/2 transform -translate-x-1/2 ${plan.badgeBg} text-white px-6 py-2 rounded-full text-sm font-bold`}
+                  className={`absolute -top-0 right-0 ${plan.badgeBg} text-white px-4 py-2 rounded-full text-md  font-bold`}
                 >
                   {plan.badge}
                 </div>
@@ -140,7 +138,7 @@ export default function Pricing() {
               {/* Features */}
               <div className="space-y-4 mb-8">
                 {plan.features.map((feature, idx) => (
-                  <div key={idx} className="flex items-center gap-3 group">
+                  <div key={idx} className="flex items-center gap-3 group opacity-60 hover:opacity-100 transition-opacity">
                     <span className={`${plan.textColor} font-semibold text-sm`}>{feature.name}</span>
                     <div className="relative flex items-center ml-auto">
                       <Icon
@@ -159,7 +157,7 @@ export default function Pricing() {
               </div>
 
               {/* Price */}
-              <div className={`text-3xl font-bold mb-8 ${plan.textColor} text-center`}>
+              <div className={`text-3xl font-black underline traking-tight mb-8 ${plan.textColor} text-end`}>
                 {billingPeriod === 'monthly' ? plan.monthlyPrice : plan.yearlyPrice}
               </div>
 

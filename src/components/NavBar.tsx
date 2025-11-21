@@ -9,7 +9,7 @@ export default class NavBar extends Component {
       <div className="w-6xl  sticky top-2 z-50 transition my-2 bg-opacity-80 mx-4 rounded-full bg-zinc-900 text-white flex items-center justify-between px-2 py-2 shadow-md">
         <div className="flex items-center w-full">
           <Image src="/logo.png" alt="Voytrail Logo" width={48} height={48} className="rounded-full" />
-          <span className="ml-2 text-xl font-bold text-zinc-200">Voytrail.</span>
+          <span className="ml-2 text-2xl font-bold text-zinc-200">voytrail.</span>
         </div>
         <nav className="items-center gap-4">
           <a href="#" className="px-3 py-2 text-sm font-medium text-zinc-400 hover:text-white transition">
