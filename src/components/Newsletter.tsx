@@ -35,12 +35,12 @@ export default function Newsletter() {
 
   return (
     <div className="w-full max-w-5xl flex flex-col my-20 mx-auto">
-      <div className="w-full bg-gradient-to-br from-slate-700 to-slate-900 rounded-3xl overflow-hidden shadow-lg">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center p-8 md:p-12">
+      <div className="w-full bg-gradient-to-br from-slate-700 to-slate-900 rounded-4xl overflow-hidden shadow-lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center p-8 pr-0 md:p-12">
           {/* Content Section */}
           <div className="flex flex-col justify-center gap-4">
             <h2 className="text-4xl md:text-5xl font-black text-white">Stay Updated</h2>
-            <p className="text-lg text-sky-100">
+            <p className="text-lg text-gray-300 ">
               Subscribe to our newsletter and get the latest travel tips, exclusive deals, and destination guides
               delivered to your inbox.
             </p>
@@ -59,7 +59,7 @@ export default function Newsletter() {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="px-6 py-3 bg-sky-500 hover:bg-sky-600 text-white font-bold rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-4 py-2 bg-sky-900 hover:bg-sky-600 text-white font-medium rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isLoading ? 'Subscribing...' : 'Subscribe'}
                 </button>
@@ -72,7 +72,7 @@ export default function Newsletter() {
               )}
             </form>
 
-            <p className="text-xs text-sky-200 mt-2">We respect your privacy. Unsubscribe at any time.</p>
+            <p className="text-sm text-gray-300 mt-2">We respect your privacy. Unsubscribe at any time.</p>
           </div>
 
           {/* Image Section */}

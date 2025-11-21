@@ -38,23 +38,23 @@ export default class FAQ extends React.Component {
 
     return (
       <div className=" w-7xl flex-col my-20 gap-4 md:gap-16 items-center">
-        <h2 className="text-4xl font-black text-gray-800 mb-6 text-center">Features</h2>
-        <Accordion transition transitionTimeout={400} 
-          className='w-2/3 mx-auto'
-        >
+        <h2 className="text-4xl font-semibold text-gray-800 mb-6 text-center ">Frequently Asked Questions</h2>
+        <Accordion transition transitionTimeout={400} className="w-2/3 mx-auto">
           {data.map((item, index) => (
             <AccordionItem
               key={index}
               header={item.title}
               className={({ isEnter }) =>
-                `w-full border-2 rounded-3xl transition-all mb-2 duration-400 ${isEnter ? 'border-slate-800 bg-slate-950' : 'border-slate-200 bg-slate-50'}`
+                `w-full border-2  rounded-4xl transition-all mb-2 duration-400 ${isEnter ? 'border-slate-300  bg-slate-100' : 'border-slate-200 bg-slate-50 hover:bg-slate-100 '}`
               }
               buttonProps={{
                 className: ({ isEnter }) =>
-                  `flex w-full text-justify text-xl font-bold p-4 transition-colors duration-400 ${isEnter ? 'text-slate-100' : 'text-slate-500'}`,
+                  `flex w-full text-justify text-lg font-semibold p-6 transition-colors duration-400 ${isEnter ? 'text-slate-800 pb-2' : 'text-slate-800 '}`,
               }}
             >
-              <p className="text-gray-400 text-justify p-4 pt-0">{item.description}</p>
+              <p className="text-gray-500 text-md font-medium leading-relaxed tracking-tight text-justify p-6 pt-0">
+                {item.description}
+              </p>
             </AccordionItem>
           ))}
         </Accordion>

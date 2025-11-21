@@ -14,7 +14,7 @@ export default function Pricing() {
       monthlyPrice: 'Free',
       yearlyPrice: 'Free',
       badge: null,
-      bgColor: 'bg-gray-100 border-2 border-gray-200',
+      bgColor: 'bg-gray-50 border-2 border-gray-200',
       textColor: 'text-slate-800',
       buttonBg: 'bg-blue-100 hover:bg-blue-200 text-blue-600',
       badgeBg: null,
@@ -26,25 +26,6 @@ export default function Pricing() {
         { name: 'Social Engagement', tooltip: 'Track social metrics' },
       ],
       cta: 'Get Started',
-    },
-    {
-      id: 'basic',
-      name: 'Basic',
-      monthlyPrice: '€9.99',
-      yearlyPrice: '€64.90',
-      badge: null,
-      bgColor: 'bg-gray-100 border-2 border-gray-200',
-      textColor: 'text-slate-800',
-      buttonBg: 'bg-slate-600 hover:bg-slate-700 text-white',
-      badgeBg: null,
-      features: [
-        { name: 'Full Analytics', tooltip: 'Comprehensive analytics' },
-        { name: 'User Behavior Insights', tooltip: 'Detailed user insights' },
-        { name: 'Conversion Tracking', tooltip: 'Advanced conversion tracking' },
-        { name: 'Performance Metrics', tooltip: 'Full performance metrics' },
-        { name: 'Social Engagement', tooltip: 'Social media analytics' },
-      ],
-      cta: 'Choose Plan',
     },
     {
       id: 'premium',
@@ -117,7 +98,7 @@ export default function Pricing() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-3 gap-4 mx-20 md:grid-cols-3 sm:grid-cols-1">
           {plans.map((plan) => (
             <div
               key={plan.id}
@@ -160,7 +141,7 @@ export default function Pricing() {
               </div>
 
               {/* Price */}
-              <div className={`text-3xl font-black underline traking-tight mb-4 ${plan.textColor} text-end`}>
+              <div className={`text-3xl font-black underline traking-tight mb-4 mr-2 ${plan.textColor} text-end`}>
                 {billingPeriod === 'monthly' ? plan.monthlyPrice : plan.yearlyPrice}
               </div>
 
@@ -169,7 +150,7 @@ export default function Pricing() {
                 className={`w-full py-2 rounded-2xl font-bold transition-all duration-300 ${
                   plan.name === 'Premium'
                     ? 'bg-white text-indigo-900 border-2 border-current hover:bg-indigo-900 hover:text-white '
-                    : plan.bgColor === 'bg-gray-100 border-2 border-gray-200'
+                    : plan.bgColor === 'bg-gray-50 border-2 border-gray-200'
                       ? `${plan.textColor} border-2 border-current hover:bg-gray-800 hover:text-white`
                       : `${plan.textColor} border-2 border-current hover:bg-gray-100 hover:text-gray-800`
                 }`}
