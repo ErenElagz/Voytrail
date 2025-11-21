@@ -47,7 +47,7 @@ export default class FAQ extends React.Component {
               key={index}
               header={item.title}
               className={({ isEnter }) =>
-                `w-full border-2 rounded-2xl transition-all mb-2 duration-400 ${isEnter ? 'border-slate-800 bg-slate-950' : 'border-slate-200 bg-slate-50'}`
+                `w-full border-2 rounded-3xl transition-all mb-2 duration-400 ${isEnter ? 'border-slate-800 bg-slate-950' : 'border-slate-200 bg-slate-50'}`
               }
               buttonProps={{
                 className: ({ isEnter }) =>

@@ -50,7 +50,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <div className="w-full bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-300 py-16 px-4 my-20">
+    <div className="w-full bg-gray-50 py-16 px-4 my-20">
       <div className="w-7xl mx-auto">
         {/* Title Section */}
         <div className="flex items-center gap-3 mb-8 tracking-tighter">
@@ -63,20 +63,20 @@ export default function Testimonials() {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className=" bg-indigo-900 rounded-3xl overflow-hidden p-2 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-101"
+              className=" bg-slate-100 rounded-4xl border-2 border-slate-300 p-2"
             >
               {/* Testimonial Image */}
               <div className="relative h-48 w-full">
-                <Image src={testimonial.image} alt={testimonial.role} fill className="object-cover rounded-2xl" />
+                <Image src={testimonial.image} alt={testimonial.role} fill className="object-cover rounded-3xl" />
               </div>
 
               {/* Testimonial Content */}
-              <div className="p-4 flex flex-col gap-2">
+              <div className="p-3 flex flex-col gap-2">
                 {/* Title */}
-                <h3 className="text-xl font-bold text-white">{testimonial.title}</h3>
+                <h3 className="text-xl font-bold text-black">{testimonial.title}</h3>
 
                 {/* Description */}
-                <p className="text-sm text-green-50 leading-relaxed text-justify mb-4">{testimonial.description}</p>
+                <p className="text-sm text-black leading-relaxed text-justify mb-3">{testimonial.description}</p>
 
                 {/* Author Info */}
                 <div className="flex items-center gap-3">
@@ -84,8 +84,8 @@ export default function Testimonials() {
                     <Image src={testimonial.avatar} alt={testimonial.name} fill className="object-cover" />
                   </div>
                   <div>
-                    <p className="text-lg font-bold text-white">{testimonial.name}</p>
-                    <p className="text-md text-lime-200">{testimonial.role}</p>
+                    <p className="text-lg font-bold text-black  ">{testimonial.name}</p>
+                              <p className="text-md text-gray-600">{testimonial.role}</p>
                   </div>
                 </div>
               </div>

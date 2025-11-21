@@ -14,7 +14,7 @@ export default function Pricing() {
       monthlyPrice: 'Free',
       yearlyPrice: 'Free',
       badge: null,
-      bgColor: 'bg-gray-50 border-2 border-gray-200',
+      bgColor: 'bg-gray-100 border-2 border-gray-200',
       textColor: 'text-slate-800',
       buttonBg: 'bg-blue-100 hover:bg-blue-200 text-blue-600',
       badgeBg: null,
@@ -52,7 +52,7 @@ export default function Pricing() {
       monthlyPrice: '€29.99',
       yearlyPrice: '€299.99',
       badge: 'Most Popular',
-      bgColor: 'bg-linear-to-br from-indigo-600 to-indigo-800 shadow-2xl transform scale-103',
+      bgColor: 'bg-linear-to-br from-indigo-600 to-indigo-800 shadow-2xl transform scale-102',
       textColor: 'text-white',
       buttonBg: 'bg-white hover:bg-indigo-100 text-indigo-950',
       badgeBg: 'bg-indigo-950 shadow-lg ',
@@ -68,8 +68,8 @@ export default function Pricing() {
     {
       id: 'enterprise',
       name: 'Enterprise',
-      monthlyPrice: 'Custom',
-      yearlyPrice: 'Custom',
+      monthlyPrice: 'Contact Us',
+      yearlyPrice: 'Contact Us',
       badge: null,
       bgColor: 'bg-linear-to-br from-slate-800 to-slate-950 ',
       textColor: 'text-gray-100',
@@ -82,15 +82,15 @@ export default function Pricing() {
         { name: 'Performance Metrics', tooltip: 'Custom metrics' },
         { name: 'Social Engagement', tooltip: 'Custom integration' },
       ],
-      cta: 'Contact Us',
+      cta: 'Continue',
     },
   ];
 
   return (
-    <div className="w-full bg-gradient-to-b from-white to-gray-50 py-24 px-4">
+    <div className="w-full py-24 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="w-full flex flex-col items-center gap-4 mb-10">
+        <div className="w-full flex flex-col items-center gap-4 mb-8">
           <div>
             <h1 className="text-4xl font-black text-slate-800 underline">Pricing</h1>
           </div>
@@ -121,7 +121,7 @@ export default function Pricing() {
           {plans.map((plan) => (
             <div
               key={plan.id}
-              className={`relative ${plan.bgColor} rounded-4xl p-8 transition-transform hover:scale-101`}
+              className={`relative ${plan.bgColor} rounded-4xl px-4 py-8 pb-4 transition-transform hover:scale-101`}
             >
               {/* Badge */}
               {plan.badge && (
@@ -133,13 +133,16 @@ export default function Pricing() {
               )}
 
               {/* Plan Name */}
-              <h3 className={`text-3xl font-bold mb-8 ${plan.textColor} underline`}>{plan.name}</h3>
+              <h3 className={`text-3xl font-bold mb-8 ${plan.textColor} underline px-2`}>{plan.name}</h3>
 
               {/* Features */}
-              <div className="space-y-4 mb-8">
+              <div className="space-y-4 mb-8 px-2">
                 {plan.features.map((feature, idx) => (
-                  <div key={idx} className="flex items-center gap-3 group opacity-60 hover:opacity-100 transition-opacity">
-                    <span className={`${plan.textColor} font-semibold text-sm`}>{feature.name}</span>
+                  <div
+                    key={idx}
+                    className="flex items-center gap-3 group opacity-60 hover:opacity-100 transition-opacity"
+                  >
+                    <span className={`${plan.textColor} font-semibold text-sm underline`}>{feature.name}</span>
                     <div className="relative flex items-center ml-auto">
                       <Icon
                         icon="mdi:help-circle-outline"
@@ -157,18 +160,18 @@ export default function Pricing() {
               </div>
 
               {/* Price */}
-              <div className={`text-3xl font-black underline traking-tight mb-8 ${plan.textColor} text-end`}>
+              <div className={`text-3xl font-black underline traking-tight mb-4 ${plan.textColor} text-end`}>
                 {billingPeriod === 'monthly' ? plan.monthlyPrice : plan.yearlyPrice}
               </div>
 
               {/* CTA Button */}
               <button
-                className={`w-full py-3 rounded-lg font-bold transition-all ${
+                className={`w-full py-2 rounded-2xl font-bold transition-all duration-300 ${
                   plan.name === 'Premium'
-                    ? 'bg-white text-blue-600 hover:bg-gray-100'
-                    : plan.bgColor === 'bg-gray-100'
-                      ? `${plan.textColor} border-2 border-current hover:bg-gray-200`
-                      : `${plan.textColor} border-2 border-current hover:opacity-90`
+                    ? 'bg-white text-indigo-900 border-2 border-current hover:bg-indigo-900 hover:text-white '
+                    : plan.bgColor === 'bg-gray-100 border-2 border-gray-200'
+                      ? `${plan.textColor} border-2 border-current hover:bg-gray-800 hover:text-white`
+                      : `${plan.textColor} border-2 border-current hover:bg-gray-100 hover:text-gray-800`
                 }`}
               >
                 {plan.cta}

@@ -48,11 +48,11 @@ export default class Features extends Component {
                 key={index}
                 header={item.title}
                 className={({ isEnter }) =>
-                  `w-full border-2 rounded-2xl transition-all mb-2 duration-400 ${isEnter ? 'border-slate-800 bg-slate-950' : 'border-slate-200 bg-slate-50'}`
+                  `w-full border-2 rounded-3xl text-center transition-all mb-2 duration-400 ${isEnter ? 'border-slate-800 bg-slate-950' : 'border-slate-200 bg-slate-50'}`
                 }
                 buttonProps={{
                   className: ({ isEnter }) =>
-                    `flex w-full text-justify text-xl font-bold p-4 transition-colors duration-400 ${isEnter ? 'text-slate-100' : 'text-slate-500'}`,
+                    `flex w-full text-justify text-xl  font-bold p-4 transition-colors duration-400 ${isEnter ? 'text-gray-100' : 'text-gray-500'}`,
                 }}
               >
                 <p className="text-gray-400 text-justify p-4 pt-0">{item.description}</p>
