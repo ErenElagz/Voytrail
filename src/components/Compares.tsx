@@ -1,82 +1,136 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import '@/styles/globals.css';
 import { Icon } from '@iconify/react';
 
-export default class Compares extends Component {
-  render() {
-    const data = [
-      {
-        title: 'Taplink',
-        description: 'Perfect for coliving spaces looking to streamline their online presence and boost bookings.',
-        image: '/coliving.png',
-        features: ['Free Wi-Fi', '24/7 Customer Support'],
-      },
-      {
-        title: 'Linktree',
-        description: 'Perfect for hotels looking to streamline their online presence and boost bookings.',
-        image: '/hotel.png',
-        features: ['Free Wi-Fi', '24/7 Customer Support'],
-      },
-      {
-        title: 'Beacon',
-        description: 'Perfect for hostels looking to streamline their online presence and boost bookings.',
-        image: '/hostel.png',
-        features: ['Free Wi-Fi', '24/7 Customer Support'],
-      },
-      {
-        title: 'Pallyy',
-        description: 'Perfect for coliving spaces looking to streamline their online presence and boost bookings.',
-        image: '/coliving.png',
-        features: ['Free Wi-Fi', '24/7 Customer Support'],
-      },
-      {
-        title: 'VoyTrail.',
-        description: 'Perfect for coliving spaces looking to streamline their online presence and boost bookings.',
-        image: '/coliving.png',
-        features: ['Free Wi-Fi', '24/7 Customer Support'],
-      },
-    ];
+export default function Compares() {
+  const comparison = [
+    {
+      feature: 'Free Usage',
+      taplink: true,
+      beacons: true,
+      linktree: true,
+      pallyy: true,
+      voytrail: true,
+    },
+    {
+      feature: 'Implement Links',
+      taplink: true,
+      beacons: true,
+      linktree: true,
+      pallyy: true,
+      voytrail: true,
+    },
+    {
+      feature: 'Social Media Links',
+      taplink: false,
+      beacons: false,
+      linktree: true,
+      pallyy: true,
+      voytrail: true,
+    },
+    {
+      feature: 'Featured Cards',
+      taplink: false,
+      beacons: false,
+      linktree: true,
+      pallyy: true,
+      voytrail: true,
+    },
+    {
+      feature: 'Tab Section',
+      taplink: false,
+      beacons: false,
+      linktree: false,
+      pallyy: false,
+      voytrail: true,
+    },
+    {
+      feature: 'Event Cards',
+      taplink: false,
+      beacons: false,
+      linktree: false,
+      pallyy: false,
+      voytrail: true,
+    },
+    {
+      feature: 'Analytics Support',
+      taplink: false,
+      beacons: false,
+      linktree: false,
+      pallyy: false,
+      voytrail: true,
+    },
+  ];
 
-    
-    return (
-      <div className=" w-7xl flex flex-col my-20">
-        <h2 className="text-4xl font-black text-gray-800 mb-4 text-center">Compare with other platforms</h2>
-        <div className="relative overflow-x-auto bg-neutral-primary shadow-xs rounded-base border border-default my-6">
-          <table className="w-full text-sm text-left rtl:text-right text-body">
-            <thead className="text-sm text-body border-b border-default">
-              <tr>
-                <th scope="col" className="px-6 py-3 bg-neutral-secondary-soft font-medium">
-                  Feature
-                </th>
-                {data.map((item, index) => (
-                  <th key={index} scope="col" className="px-6 py-3 font-medium">
-                    {item.title}
-                  </th>
+  const platforms = [
+    { key: 'taplink', name: 'Taplink', image: '/compares/taplink.png', price: '6€' },
+    { key: 'beacons', name: 'Beacons', image: '/compares/beacons.png', price: '25€' },
+    { key: 'linktree', name: 'Linktree', image: '/compares/linktree.png', price: '13€' },
+    { key: 'pallyy', name: 'Pallyy', image: '/compares/pallyy.png', price: '25€' },
+    { key: 'voytrail', name: 'VoyTrail', image: '/compares/voytrail.png', price: '9€' },
+  ];
+
+  return (
+    <div className="w-full py-16 px-4">
+      <div className="max-w-7xl mx-auto mb-20">
+        <h2 className="text-4xl font-black text-gray-800 mb-4">Compare with Alternatives</h2>
+
+        {/* Comparison Table */}
+        <div className="rounded-3xl overflow-hidden border-2 border-gray-200">
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              {/* Header with Logos */}
+              <thead>
+                <tr>
+                  <th className="text-left w-1/4"></th>
+                  {platforms.map((platform) => (
+                    <th key={platform.key} className="text-center">
+                      <div className="flex flex-col items-center gap-3">
+                        <Image
+                          src={platform.image}
+                          alt={platform.name}
+                          width={240}
+                          height={120}
+                          className="object-contain"
+                        />
+                      </div>
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+
+              {/* Features */}
+              <tbody>
+                {comparison.map((row, rowIndex) => (
+                  <tr key={rowIndex} className="border-t border-gray-200 hover:bg-gray-50 transition-colors">
+                    <td className="py-6 px-4 text-left font-semibold text-gray-700 bg-gray-50">{row.feature}</td>
+                    {platforms.map((platform) => (
+                      <td key={platform.key} className="py-6 px-4 text-center">
+                        {row[platform.key as keyof typeof row] ? (
+                          <Icon icon="mdi:check-circle" width={28} height={28} className="text-green-500 mx-auto" />
+                        ) : (
+                          <Icon icon="mdi:close-circle" width={28} height={28} className="text-red-600 mx-auto" />
+                        )}
+                      </td>
+                    ))}
+                  </tr>
                 ))}
-              </tr>
-            </thead>
-            <tbody>
-              {/* Assuming all items have the same features for comparison */}
-              {data[0].features.map((feature, fIndex) => (
-                <tr key={fIndex} className="border-b border-default">
-                  <th
-                    scope="row"
-                    className="px-6 py-4 font-medium text-heading whitespace-nowrap bg-neutral-secondary-soft"
-                  >
-                    {feature}
-                  </th>
-                  {data.map((item, index) => (
-                    <td key={index} className={`px-6 py-4 ${index % 2 === 0 ? 'bg-neutral-secondary-soft' : ''}`}>
-                      <Icon icon="mdi:check" width={24} height={24} className="text-gray-400 mx-auto" />
+
+                {/* Pricing Row */}
+                <tr className="border-t border-gray-200 bg-gray-100 font-bold">
+                  <td className="py-6 px-4 text-left text-gray-800">Pricing (€/month)</td>
+                  {platforms.map((platform) => (
+                    <td key={platform.key} className="py-6 px-4 text-center text-3xl text-gray-800">
+                      {platform.price}
                     </td>
                   ))}
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }

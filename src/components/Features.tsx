@@ -41,20 +41,21 @@ export default class Features extends Component {
     return (
       <div className="flex w-7xl flex-col my-20 gap-4 md:gap-16 md:flex-row justify-between items-center">
         <div className="flex flex-col gap-2 md:w-1/2">
-          <h2 className="text-4xl font-black text-gray-800 mb-4">For Whom?</h2>
-          <Accordion className="w-full" transition transitionTimeout={1000}>
+          <h2 className="text-4xl font-black text-gray-800 mb-6">Features</h2>
+          <Accordion transition transitionTimeout={400}>
             {data.map((item, index) => (
-              <AccordionItem 
+              <AccordionItem
                 key={index}
                 header={item.title}
                 className={({ isEnter }) =>
-                  `w-full rounded-2xl border-1 p-4 mb-2  ${isEnter ? 'border-slate-400 bg-slate-100' : 'border-slate-300 bg-slate-50'}`
+                  `w-full border-2 rounded-2xl transition-all mb-2 duration-400 ${isEnter ? 'border-slate-800 bg-slate-950' : 'border-slate-200 bg-slate-50'}`
                 }
                 buttonProps={{
-                  className: ({ isEnter }) => `flex w-full text-left text-xl font-bold ${isEnter ? 'text-slate-800 ' : 'text-slate-500 '}`,
+                  className: ({ isEnter }) =>
+                    `flex w-full text-justify text-xl font-bold p-4 transition-colors duration-400 ${isEnter ? 'text-slate-100' : 'text-slate-500'}`,
                 }}
               >
-                <p className="pt-2 text-gray-700 text-justify">{item.description}</p>
+                <p className="text-gray-400 text-justify p-4 pt-0">{item.description}</p>
               </AccordionItem>
             ))}
           </Accordion>
