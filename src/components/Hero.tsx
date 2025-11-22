@@ -14,12 +14,12 @@ export default class Hero extends Component {
           <p className="text-2xl text-gray-500 mb-6 leading tracking-tight">
             Everything your hostel or hotel needs to stand out <br /> online in one simple platform.
           </p>
-          <div className="flex gap-4">
-            <button className="bg-sky-700 hover:bg-sky-900 text-white font-medium py-3 px-6 rounded-full transition">
+          <div className="flex gap-4 mt-4">
+            <button className="bg-sky-900 hover:bg-sky-950 text-white font-medium py-3 px-12 rounded-full transition duration-300 flex items-center">
               <Icon icon="mdi:rocket-launch" width="20" height="20" className="inline-block mr-2" />
-              Get Started
+              Get Start for Free
             </button>
-            <button className="hover:underline transition text-zinc-900 font-medium py-3 px-2">Learn More</button>
+            <button className="hover:text-zinc-900 tracking-tight transition duration-300 text-zinc-500 font-medium py-3 px-2">Learn More</button>
           </div>
         </div>
         <div>

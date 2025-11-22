@@ -39,9 +39,9 @@ export default class Features extends Component {
     ];
 
     return (
-      <div className="flex w-7xl flex-col my-20 gap-4 md:gap-16 md:flex-row justify-between items-center">
+      <div className="flex w-6xl flex-col my-20 gap-4 md:gap-16 md:flex-row justify-between items-center">
         <div className="flex flex-col gap-2 md:w-1/2">
-          <h2 className="text-4xl font-black text-gray-800 mb-6">Features</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-black mb-4">Why Hosts Choose Voytrail?</h2>
           <Accordion transition transitionTimeout={400}>
             {data.map((item, index) => (
               <AccordionItem
