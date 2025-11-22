@@ -34,7 +34,7 @@ export default function Newsletter() {
 
   // Reusable class strings
   const containerClasses = 'mx-auto my-32 flex w-full max-w-5xl flex-col';
-  const cardClasses = 'w-full overflow-hidden rounded-4xl bg-gradient-to-br from-zinc-700 to-zinc-900 shadow-lg';
+  const cardClasses = 'w-full overflow-hidden rounded-4xl bg-gradient-to-br from-sky-700 to-sky-950 shadow-lg';
   const gridClasses = 'grid grid-cols-1 items-center gap-8 p-8 pr-0 md:grid-cols-2 md:p-12';
   const contentClasses = 'flex flex-col justify-center gap-4';
   const headingClasses = 'text-4xl font-black text-white md:text-5xl';

@@ -45,8 +45,12 @@ export default class NavBar extends Component {
 
         {/* Action buttons */}
         <div className={buttonContainerClasses}>
-          <button className={demoButtonClasses}>Get Demo</button>
-          <button className={loginButtonClasses}>Login</button>
+          <a href="http://" target="_blank" rel="noopener noreferrer">
+            <button className={demoButtonClasses}>Get Demo</button>
+          </a>
+          <a href="https://app.voytrail.com/login" target="_blank" rel="noopener noreferrer">
+            <button className={loginButtonClasses}>Login</button>
+          </a>
         </div>
       </div>
     );

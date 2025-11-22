@@ -38,7 +38,7 @@ export default class FAQ extends React.Component {
 
     return (
       <div className=" w-7xl flex-col my-20 gap-4 md:gap-16 items-center">
-        <h2 className="text-4xl font-semibold text-gray-800 mb-6 text-center ">Frequently Asked Questions</h2>
+        <h2 className="mb-4 text-3xl font-bold tracking-tight text-slate-900 text-center">Frequently Asked Questions</h2>
         <Accordion transition transitionTimeout={400} className="w-2/3 mx-auto">
           {data.map((item, index) => (
             <AccordionItem

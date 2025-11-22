@@ -55,18 +55,14 @@ export default class Features extends Component {
                 key={index}
                 header={item.title}
                 className={({ isEnter }) =>
-                  `mb-2 w-full rounded-4xl border-2 transition-all duration-300 ${
-                    isEnter ? 'border-zinc-300 bg-zinc-100' : 'border-zinc-200 bg-zinc-50 hover:bg-zinc-100'
-                  }`
+                  `w-full border-2  rounded-4xl transition-all mb-2 duration-400 ${isEnter ? 'border-slate-300  bg-slate-100' : 'border-slate-200 bg-slate-50 hover:bg-slate-100 '}`
                 }
                 buttonProps={{
                   className: ({ isEnter }) =>
-                    `flex w-full p-6 text-justify text-lg font-semibold transition-colors duration-300 ${
-                      isEnter ? 'pb-2 text-zinc-800' : 'text-zinc-800'
-                    }`,
+                    `flex w-full text-justify text-lg font-semibold p-6 transition-colors duration-400 ${isEnter ? 'text-slate-800 pb-2' : 'text-slate-800 '}`,
                 }}
               >
-                <p className="p-6 pt-0 text-justify text-md font-medium leading-relaxed tracking-tight text-zinc-500">
+                <p className="text-gray-500 text-md font-medium leading-relaxed tracking-tight text-justify p-6 pt-0">
                   {item.description}
                 </p>
               </AccordionItem>

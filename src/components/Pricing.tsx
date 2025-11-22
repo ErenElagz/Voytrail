@@ -33,10 +33,10 @@ export default function Pricing() {
       monthlyPrice: '€12.99',
       yearlyPrice: '€140.99',
       badge: 'Most Popular',
-      bgColor: 'scale-102 transform bg-gradient-to-br from-zinc-600 to-zinc-800 shadow-2xl',
+      bgColor: 'scale-102 transform bg-gradient-to-br from-sky-600 to-sky-950 shadow-2xl',
       textColor: 'text-white',
       buttonBg: 'bg-white text-zinc-950 hover:bg-zinc-100',
-      badgeBg: 'bg-zinc-950 shadow-lg',
+      badgeBg: 'bg-sky-950 shadow-2xl' ,
       features: [
         { name: 'Full Analytics', tooltip: 'Enterprise analytics' },
         { name: 'User Behavior Insights', tooltip: 'Advanced user tracking' },
@@ -115,7 +115,7 @@ export default function Pricing() {
               {/* Badge */}
               {plan.badge && (
                 <div
-                  className={`absolute -top-0 right-0 rounded-full px-4 py-2 text-md font-bold text-white ${plan.badgeBg}`}
+                  className={`absolute -top-0 right-0 rounded-full px-5 py-2 text-md font-bold text-white ${plan.badgeBg}`}
                 >
                   {plan.badge}
                 </div>
@@ -131,7 +131,7 @@ export default function Pricing() {
                     key={idx}
                     className="group flex items-center gap-3 opacity-60 transition-opacity duration-300 hover:opacity-100"
                   >
-                    <span className={`text-sm font-semibold underline ${plan.textColor}`}>{feature.name}</span>
+                    <span className={`text-md font-semibold underline ${plan.textColor}`}>{feature.name}</span>
                     <div className="relative ml-auto flex items-center">
                       <Icon
                         icon="mdi:help-circle-outline"
@@ -154,10 +154,12 @@ export default function Pricing() {
               </div>
 
               {/* CTA button */}
+              <a href="https://app.voytrail.com/login" target="_blank" rel="noopener noreferrer">
+
               <button
                 className={`w-full rounded-2xl border-2 border-current py-2 font-bold transition-all duration-300 ${
                   plan.name === 'Premium'
-                    ? 'bg-white text-zinc-900 hover:bg-zinc-900 hover:text-white'
+                    ? 'bg-white text-sky-900 hover:bg-sky-800 hover:text-white'
                     : plan.bgColor.includes('zinc-50')
                       ? `${plan.textColor} hover:bg-zinc-800 hover:text-white`
                       : `${plan.textColor} hover:bg-zinc-100 hover:text-zinc-800`
@@ -165,6 +167,7 @@ export default function Pricing() {
               >
                 {plan.cta}
               </button>
+              </a>
             </div>
           ))}
         </div>
