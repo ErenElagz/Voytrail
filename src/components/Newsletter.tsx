@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import '@/styles/globals.css';
 
 export default function Newsletter() {
   const [email, setEmail] = useState('');
@@ -33,34 +32,48 @@ export default function Newsletter() {
     }
   };
 
+  // Reusable class strings
+  const containerClasses = 'mx-auto my-32 flex w-full max-w-5xl flex-col';
+  const cardClasses = 'w-full overflow-hidden rounded-4xl bg-gradient-to-br from-zinc-700 to-zinc-900 shadow-lg';
+  const gridClasses = 'grid grid-cols-1 items-center gap-8 p-8 pr-0 md:grid-cols-2 md:p-12';
+  const contentClasses = 'flex flex-col justify-center gap-4';
+  const headingClasses = 'text-4xl font-black text-white md:text-5xl';
+  const descriptionClasses = 'text-lg text-zinc-300';
+  const formClasses = 'mt-4 flex flex-col gap-3';
+  const inputContainerClasses = 'flex flex-col gap-2 sm:flex-row';
+  const inputClasses =
+    'flex-1 rounded-lg bg-white px-4 py-3 text-zinc-800 placeholder-zinc-500 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zinc-400';
+  const buttonClasses =
+    'rounded-lg bg-zinc-800 px-4 py-2 font-medium text-white transition-all duration-300 hover:bg-zinc-600 disabled:cursor-not-allowed disabled:opacity-50';
+  const privacyClasses = 'mt-2 text-sm text-zinc-300';
+  const imageContainerClasses = 'flex justify-center';
+  const imageWrapperClasses = 'relative h-64 w-full md:h-80';
+  const imageClasses = 'object-contain';
+
   return (
-    <div className="w-full max-w-5xl flex flex-col my-32 mx-auto">
-      <div className="w-full bg-gradient-to-br from-slate-700 to-slate-900 rounded-4xl overflow-hidden shadow-lg">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center p-8 pr-0 md:p-12">
-          {/* Content Section */}
-          <div className="flex flex-col justify-center gap-4">
-            <h2 className="text-4xl md:text-5xl font-black text-white">Stay Updated</h2>
-            <p className="text-lg text-gray-300 ">
+    <div className={containerClasses}>
+      <div className={cardClasses}>
+        <div className={gridClasses}>
+          {/* Content section */}
+          <div className={contentClasses}>
+            <h2 className={headingClasses}>Stay Updated</h2>
+            <p className={descriptionClasses}>
               Subscribe to our newsletter and get the latest travel tips, exclusive deals, and destination guides
               delivered to your inbox.
             </p>
 
-            {/* Email Input Form */}
-            <form onSubmit={handleSubmit} className="flex flex-col gap-3 mt-4">
-              <div className="flex flex-col sm:flex-row gap-2">
+            {/* Email input form */}
+            <form onSubmit={handleSubmit} className={formClasses}>
+              <div className={inputContainerClasses}>
                 <input
                   type="email"
                   placeholder="Enter your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 px-4 py-3 rounded-lg bg-white text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-sky-400 transition-all"
+                  className={inputClasses}
                   disabled={isLoading}
                 />
-                <button
-                  type="submit"
-                  disabled={isLoading}
-                  className="px-4 py-2 bg-sky-900 hover:bg-sky-600 text-white font-medium rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
+                <button type="submit" disabled={isLoading} className={buttonClasses}>
                   {isLoading ? 'Subscribing...' : 'Subscribe'}
                 </button>
               </div>
@@ -72,13 +85,13 @@ export default function Newsletter() {
               )}
             </form>
 
-            <p className="text-sm text-gray-300 mt-2">We respect your privacy. Unsubscribe at any time.</p>
+            <p className={privacyClasses}>We respect your privacy. Unsubscribe at any time.</p>
           </div>
 
-          {/* Image Section */}
-          <div className="flex justify-center">
-            <div className="relative w-full h-64 md:h-80">
-              <Image src="/newsletter.png" alt="Newsletter" fill className="object-contain" priority />
+          {/* Image section */}
+          <div className={imageContainerClasses}>
+            <div className={imageWrapperClasses}>
+              <Image src="/newsletter.png" alt="Newsletter" fill className={imageClasses} priority />
             </div>
           </div>
         </div>

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Image from 'next/image';
-import '@/styles/globals.css';
 import { Icon } from '@iconify/react';
 
 export default class ForWhom extends Component {
   render() {
+    // Service card data configuration
     const data = [
       {
         title: 'Hotels',
@@ -52,51 +52,60 @@ export default class ForWhom extends Component {
       },
     ];
 
-    return (
-      <div className="w-full bg-gray-100 py-20 my-20">
-        <div className="w-6xl mx-auto">
-          <h2 className="text-3xl font-bold tracking-tight text-black mb-8">Trusted by Over 50+ Hostels and Hotels</h2>
+    // Reusable class strings for consistency
+    const containerClasses = 'my-20 w-full bg-zinc-100 py-20';
+    const wrapperClasses = 'mx-auto w-6xl';
+    const headingClasses = 'mb-8 text-3xl font-bold tracking-tight text-zinc-900';
+    const gridClasses = 'grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4';
+    const cardClasses =
+      'group relative h-96 overflow-hidden rounded-3xl border-2 border-zinc-200 bg-white transition-all duration-300 hover:border-zinc-300 hover:shadow-2xl';
+    const imageContainerClasses = 'absolute inset-0 overflow-hidden';
+    const imageClasses = 'h-full w-full object-cover transition-transform duration-300 group-hover:scale-110';
+    const overlayClasses = 'absolute inset-0 bg-black/30';
+    const contentClasses =
+      'absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/80 to-transparent p-6';
+    const titleClasses = 'mb-2 text-2xl font-bold text-white';
+    const descriptionClasses = 'mb-4 text-sm leading-relaxed text-zinc-200';
+    const listClasses = 'space-y-1';
+    const listItemClasses = 'flex items-start gap-2';
+    const iconClasses = 'mt-0.5 flex-shrink-0 text-green-400';
+    const featureTextClasses = 'text-xs text-zinc-100';
 
-          {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
+    return (
+      <div className={containerClasses}>
+        <div className={wrapperClasses}>
+          <h2 className={headingClasses}>Trusted by Over 50+ Hostels and Hotels</h2>
+
+          {/* Service cards grid */}
+          <div className={gridClasses}>
             {data.map((item, index) => (
-              <div
-                key={index}
-                className="h-96 bg-white rounded-3xl overflow-hidden transition-all duration-300 relative group border-2 border-gray-200 hover:border-gray-300 hover:shadow-2xl"
-              >
-                {/* Background Image */}
-                <div className="absolute inset-0 overflow-hidden">
+              <div key={index} className={cardClasses}>
+                {/* Background image */}
+                <div className={imageContainerClasses}>
                   <Image
                     src={item.image}
                     alt={item.title}
                     width={500}
                     height={500}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className={imageClasses}
+                    priority={index === 0}
                   />
                 </div>
 
-                {/* Dark Overlay */}
-                <div className="absolute inset-0 bg-black/30" />
+                {/* Dark overlay for readability */}
+                <div className={overlayClasses} />
 
-                {/* Content Overlay */}
-                <div className="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black/80 to-transparent">
-                  {/* Title */}
-                  <h3 className="text-2xl font-bold text-white mb-2">{item.title}</h3>
+                {/* Content overlay with gradient */}
+                <div className={contentClasses}>
+                  <h3 className={titleClasses}>{item.title}</h3>
+                  <p className={descriptionClasses}>{item.description}</p>
 
-                  {/* Description */}
-                  <p className="text-sm text-gray-200 leading-relaxed mb-4">{item.description}</p>
-
-                  {/* Features */}
-                  <ul className="space-y-1">
+                  {/* Feature list */}
+                  <ul className={listClasses}>
                     {item.features.map((feature, fIndex) => (
-                      <li key={fIndex} className="flex gap-2 items-start">
-                        <Icon
-                          icon="mdi:check-circle"
-                          width={16}
-                          height={16}
-                          className="text-green-400 flex-shrink-0 mt-0.5"
-                        />
-                        <span className="text-xs text-gray-100">{feature}</span>
+                      <li key={fIndex} className={listItemClasses}>
+                        <Icon icon="mdi:check-circle" width={16} height={16} className={iconClasses} />
+                        <span className={featureTextClasses}>{feature}</span>
                       </li>
                     ))}
                   </ul>

@@ -1,12 +1,12 @@
 'use client';
 
 import React, { useState } from 'react';
-import '@/styles/globals.css';
 import { Icon } from '@iconify/react';
 
 export default function Pricing() {
   const [billingPeriod, setBillingPeriod] = useState('monthly');
 
+  // Pricing plans configuration
   const plans = [
     {
       id: 'free',
@@ -14,9 +14,9 @@ export default function Pricing() {
       monthlyPrice: 'Free',
       yearlyPrice: 'Free',
       badge: null,
-      bgColor: 'bg-gray-50 border-2 border-gray-200',
-      textColor: 'text-slate-800',
-      buttonBg: 'bg-blue-100 hover:bg-blue-200 text-blue-600',
+      bgColor: 'border-2 border-zinc-200 bg-zinc-50',
+      textColor: 'text-zinc-800',
+      buttonBg: 'bg-zinc-100 text-zinc-600 hover:bg-zinc-200',
       badgeBg: null,
       features: [
         { name: 'Full Analytics', tooltip: 'Basic analytics dashboard' },
@@ -33,10 +33,10 @@ export default function Pricing() {
       monthlyPrice: '€12.99',
       yearlyPrice: '€140.99',
       badge: 'Most Popular',
-      bgColor: 'bg-linear-to-br from-indigo-600 to-indigo-800 shadow-2xl transform scale-102',
+      bgColor: 'scale-102 transform bg-gradient-to-br from-zinc-600 to-zinc-800 shadow-2xl',
       textColor: 'text-white',
-      buttonBg: 'bg-white hover:bg-indigo-100 text-indigo-950',
-      badgeBg: 'bg-indigo-950 shadow-lg ',
+      buttonBg: 'bg-white text-zinc-950 hover:bg-zinc-100',
+      badgeBg: 'bg-zinc-950 shadow-lg',
       features: [
         { name: 'Full Analytics', tooltip: 'Enterprise analytics' },
         { name: 'User Behavior Insights', tooltip: 'Advanced user tracking' },
@@ -52,9 +52,9 @@ export default function Pricing() {
       monthlyPrice: 'Contact Us',
       yearlyPrice: 'Contact Us',
       badge: null,
-      bgColor: 'bg-linear-to-br from-slate-800 to-slate-950 ',
-      textColor: 'text-gray-100',
-      buttonBg: 'bg-gray-900 hover:bg-gray-100 text-white',
+      bgColor: 'bg-gradient-to-br from-zinc-800 to-zinc-950',
+      textColor: 'text-zinc-100',
+      buttonBg: 'bg-zinc-900 text-white hover:bg-zinc-100',
       badgeBg: null,
       features: [
         { name: 'Full Analytics', tooltip: 'Custom analytics' },
@@ -67,73 +67,81 @@ export default function Pricing() {
     },
   ];
 
+  // Reusable class strings
+  const containerClasses = 'my-20 w-full';
+  const wrapperClasses = 'mx-auto max-w-6xl';
+  const headerClasses = 'mb-12 flex w-full flex-col items-center gap-4';
+  const headingClasses = 'text-4xl font-black text-zinc-800 underline';
+  const toggleContainerClasses = 'flex items-center justify-start rounded-full border-2 border-zinc-200 bg-zinc-50';
+  const gridClasses = 'grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-3';
+
   return (
-    <div className="w-full my-20" id='Pricing'>
-      <div className="max-w-6xl mx-auto">
+    <div className={containerClasses} id="Pricing">
+      <div className={wrapperClasses}>
         {/* Header */}
-        <div className="w-full flex flex-col items-center gap-4 mb-12">
+        <div className={headerClasses}>
           <div>
-            <h1 className="text-4xl font-black text-slate-800 underline">Pricing Plans</h1>
+            <h1 className={headingClasses}>Pricing Plans</h1>
           </div>
 
-          {/* Billing Toggle */}
-          <div className="flex justify-start items-center bg-gray-50 border-2 border-gray-200 rounded-full">
+          {/* Billing toggle */}
+          <div className={toggleContainerClasses}>
             <button
               onClick={() => setBillingPeriod('monthly')}
-              className={`px-6 py-2 font-bold rounded-full transition-all duration-300 ${
-                billingPeriod === 'monthly' ? 'text-gray-900 bg-white shadow-md' : 'text-gray-600 hover:text-gray-900'
+              className={`rounded-full px-6 py-2 font-bold transition-all duration-300 ${
+                billingPeriod === 'monthly' ? 'bg-white text-zinc-900 shadow-md' : 'text-zinc-600 hover:text-zinc-900'
               }`}
             >
               Monthly
             </button>
             <button
               onClick={() => setBillingPeriod('yearly')}
-              className={`px-6 py-2 rounded-full font-bold transition-all duration-300 ${
-                billingPeriod === 'yearly' ? 'bg-slate-800 text-white shadow-lg' : 'text-gray-600 hover:text-gray-900'
+              className={`rounded-full px-6 py-2 font-bold transition-all duration-300 ${
+                billingPeriod === 'yearly' ? 'bg-zinc-800 text-white shadow-lg' : 'text-zinc-600 hover:text-zinc-900'
               }`}
             >
-              Yearly<span className="ml-1 text-sm font-semibold text-gray-300">(20% off)</span>
+              Yearly<span className="ml-1 text-sm font-semibold text-zinc-300">(20% off)</span>
             </button>
           </div>
         </div>
 
-        {/* Pricing Cards */}
-        <div className="grid grid-cols-3 gap-4 md:grid-cols-3 sm:grid-cols-1">
+        {/* Pricing cards */}
+        <div className={gridClasses}>
           {plans.map((plan) => (
             <div
               key={plan.id}
-              className={`relative ${plan.bgColor} rounded-4xl px-4 py-8 pb-4 transition-transform hover:scale-101`}
+              className={`relative rounded-4xl px-4 py-8 pb-4 transition-transform duration-300 hover:scale-101 ${plan.bgColor}`}
             >
               {/* Badge */}
               {plan.badge && (
                 <div
-                  className={`absolute -top-0 right-0 ${plan.badgeBg} text-white px-4 py-2 rounded-full text-md  font-bold`}
+                  className={`absolute -top-0 right-0 rounded-full px-4 py-2 text-md font-bold text-white ${plan.badgeBg}`}
                 >
                   {plan.badge}
                 </div>
               )}
 
-              {/* Plan Name */}
-              <h3 className={`text-3xl font-bold mb-8 ${plan.textColor} underline px-2`}>{plan.name}</h3>
+              {/* Plan name */}
+              <h3 className={`mb-8 px-2 text-3xl font-bold underline ${plan.textColor}`}>{plan.name}</h3>
 
               {/* Features */}
-              <div className="space-y-4 mb-8 px-2">
+              <div className="mb-8 space-y-4 px-2">
                 {plan.features.map((feature, idx) => (
                   <div
                     key={idx}
-                    className="flex items-center gap-3 group opacity-60 hover:opacity-100 transition-opacity"
+                    className="group flex items-center gap-3 opacity-60 transition-opacity duration-300 hover:opacity-100"
                   >
-                    <span className={`${plan.textColor} font-semibold text-sm underline`}>{feature.name}</span>
-                    <div className="relative flex items-center ml-auto">
+                    <span className={`text-sm font-semibold underline ${plan.textColor}`}>{feature.name}</span>
+                    <div className="relative ml-auto flex items-center">
                       <Icon
                         icon="mdi:help-circle-outline"
                         width={20}
                         height={20}
-                        className={`${plan.textColor} cursor-help`}
+                        className={`cursor-help ${plan.textColor}`}
                       />
-                      <div className="absolute bottom-full right-0 mb-2 hidden group-hover:block bg-gray-800 text-white text-xs rounded-lg px-3 py-2 whitespace-nowrap z-10">
+                      <div className="absolute bottom-full right-0 z-10 mb-2 hidden whitespace-nowrap rounded-lg bg-zinc-800 px-3 py-2 text-xs text-white group-hover:block">
                         {feature.tooltip}
-                        <div className="absolute top-full right-2 border-4 border-transparent border-t-gray-800"></div>
+                        <div className="absolute right-2 top-full border-4 border-transparent border-t-zinc-800"></div>
                       </div>
                     </div>
                   </div>
@@ -141,18 +149,18 @@ export default function Pricing() {
               </div>
 
               {/* Price */}
-              <div className={`text-3xl font-black underline traking-tight mb-4 mr-2 ${plan.textColor} text-end`}>
+              <div className={`mb-4 mr-2 text-end text-3xl font-black tracking-tight underline ${plan.textColor}`}>
                 {billingPeriod === 'monthly' ? plan.monthlyPrice : plan.yearlyPrice}
               </div>
 
-              {/* CTA Button */}
+              {/* CTA button */}
               <button
-                className={`w-full py-2 rounded-2xl font-bold transition-all duration-300 ${
+                className={`w-full rounded-2xl border-2 border-current py-2 font-bold transition-all duration-300 ${
                   plan.name === 'Premium'
-                    ? 'bg-white text-indigo-900 border-2 border-current hover:bg-indigo-900 hover:text-white '
-                    : plan.bgColor === 'bg-gray-50 border-2 border-gray-200'
-                      ? `${plan.textColor} border-2 border-current hover:bg-gray-800 hover:text-white`
-                      : `${plan.textColor} border-2 border-current hover:bg-gray-100 hover:text-gray-800`
+                    ? 'bg-white text-zinc-900 hover:bg-zinc-900 hover:text-white'
+                    : plan.bgColor.includes('zinc-50')
+                      ? `${plan.textColor} hover:bg-zinc-800 hover:text-white`
+                      : `${plan.textColor} hover:bg-zinc-100 hover:text-zinc-800`
                 }`}
               >
                 {plan.cta}

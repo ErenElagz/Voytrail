@@ -1,37 +1,40 @@
 import React, { Component } from 'react';
-import { Icon } from '@iconify/react';
-import '@/styles/globals.css';
 import Image from 'next/image';
 
 export default class Companies extends Component {
   render() {
+    // Company logos data
+    const companies = [
+      { name: 'Funker', image: '/funker.png' },
+      { name: 'El Granado', image: '/elgranado.png' },
+      { name: 'The Lights Hostel', image: '/thelights.png' },
+    ];
+
+    // Reusable class strings
+    const containerClasses = 'mx-auto my-20 flex w-7xl max-w-full flex-col items-center gap-10';
+    const headingClasses = 'text-3xl font-bold tracking-tight text-zinc-900';
+    const logoContainerClasses = 'flex items-center justify-center gap-10';
+    const logoClasses = 'grayscale opacity-30 object-contain transition-opacity duration-300 hover:opacity-100';
+
     return (
-      <div className=" flex flex-col items-center w-7xl max-w-full mx-auto my-20 gap-10">
+      <div className={containerClasses}>
+        {/* Heading */}
         <div className="flex items-center">
-          <span className="text-3xl font-bold tracking-tight text-black">Trusted by Over 50+ Hostels and Hotels</span>
+          <span className={headingClasses}>Trusted by Over 50+ Hostels and Hotels</span>
         </div>
-        <div className="flex justify-center items-center gap-10">
-          <Image
-            src="/funker.png"
-            alt="Funker"
-            width={160}
-            height={80}
-            className="object-contain grayscale hover:opacity-100 transition opacity-30 duration-500"
-          />
-          <Image
-            src="/elgranado.png"
-            alt="El Granado"
-            width={160}
-            height={80}
-            className="object-contain grayscale hover:opacity-100 transition opacity-30 duration-500"
-          />
-          <Image
-            src="/thelights.png"
-            alt="The Lights Hostel"
-            width={160}
-            height={80}
-            className="object-contain grayscale hover:opacity-100 transition opacity-30 duration-500"
-          />
+
+        {/* Company logos */}
+        <div className={logoContainerClasses}>
+          {companies.map((company) => (
+            <Image
+              key={company.name}
+              src={company.image}
+              alt={company.name}
+              width={160}
+              height={80}
+              className={logoClasses}
+            />
+          ))}
         </div>
       </div>
     );

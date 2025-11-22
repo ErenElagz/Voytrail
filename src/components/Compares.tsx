@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-import '@/styles/globals.css';
 import { Icon } from '@iconify/react';
 
 export default function Compares() {
+  // Comparison data configuration
   const comparison = [
     {
       feature: 'Free Usage',
@@ -63,6 +63,7 @@ export default function Compares() {
     },
   ];
 
+  // Platform comparison data
   const platforms = [
     { key: 'taplink', name: 'Taplink', image: '/compares/taplink.png', price: '6€' },
     { key: 'beacons', name: 'Beacons', image: '/compares/beacons.png', price: '25€' },
@@ -71,22 +72,28 @@ export default function Compares() {
     { key: 'voytrail', name: 'VoyTrail', image: '/compares/voytrail.png', price: '12€' },
   ];
 
+  // Reusable class strings
+  const containerClasses = 'w-full';
+  const wrapperClasses = 'mx-auto my-20 max-w-6xl';
+  const headingClasses = 'mb-6 text-3xl font-bold tracking-tight text-zinc-900';
+  const tableContainerClasses = 'overflow-hidden rounded-4xl border-2 border-zinc-200';
+
   return (
-    <div className="w-full">
-      <div className="max-w-6xl mx-auto my-20">
-        <h2 className="text-3xl font-bold tracking-tight text-black mb-6">Compare Voytrail with Others</h2>
+    <div className={containerClasses}>
+      <div className={wrapperClasses}>
+        <h2 className={headingClasses}>Compare Voytrail with Others</h2>
 
         {/* Comparison Table */}
-        <div className="rounded-4xl overflow-hidden border-2 border-gray-200">
+        <div className={tableContainerClasses}>
           <div className="overflow-x-auto">
             <table className="w-full">
               {/* Header with Logos */}
               <thead>
                 <tr>
-                  <th className="text-left w-1/4"></th>
+                  <th className="w-1/4 text-left"></th>
                   {platforms.map((platform) => (
                     <th key={platform.key} className="text-center">
-                      <div className="flex flex-col items-center gap-3 bg-gray-50">
+                      <div className="flex flex-col items-center gap-3 bg-zinc-50">
                         <Image
                           src={platform.image}
                           alt={platform.name}
@@ -100,28 +107,34 @@ export default function Compares() {
                 </tr>
               </thead>
 
-              {/* Features */}
+              {/* Features comparison rows */}
               <tbody>
                 {comparison.map((row, rowIndex) => (
-                  <tr key={rowIndex} className="border-t border-gray-200 hover:bg-gray-100 transition-colors">
-                    <td className="py-5 px-4 text-left font-semibold text-gray-700 bg-gray-50">{row.feature}</td>
+                  <tr
+                    key={rowIndex}
+                    className="border-t border-zinc-200 transition-colors duration-300 hover:bg-zinc-100"
+                  >
+                    <td className="bg-zinc-50 px-4 py-5 text-left font-semibold text-zinc-700">{row.feature}</td>
                     {platforms.map((platform) => (
-                      <td key={platform.key} className="py-5 px-4 text-center">
+                      <td key={platform.key} className="px-4 py-5 text-center">
                         {row[platform.key as keyof typeof row] ? (
-                          <Icon icon="mdi:check-circle" width={28} height={28} className="text-green-600 mx-auto" />
+                          <Icon icon="mdi:check-circle" width={28} height={28} className="mx-auto text-green-600" />
                         ) : (
-                          <Icon icon="mdi:close-circle" width={28} height={28} className="text-red-600 mx-auto" />
+                          <Icon icon="mdi:close-circle" width={28} height={28} className="mx-auto text-red-600" />
                         )}
                       </td>
                     ))}
                   </tr>
                 ))}
 
-                {/* Pricing Row */}
-                <tr className="border-t border-gray-200 bg-gray-50 font-bold">
-                  <td className="py-6 px-4 text-left text-gray-800">Pricing (€/month)</td>
+                {/* Pricing row */}
+                <tr className="border-t border-zinc-200 bg-zinc-50 font-bold">
+                  <td className="px-4 py-6 text-left text-zinc-800">Pricing (€/month)</td>
                   {platforms.map((platform) => (
-                    <td key={platform.key} className="py-4 px-4 text-center font-bold tracking-tight text-3xl text-gray-700">
+                    <td
+                      key={platform.key}
+                      className="px-4 py-4 text-center text-3xl font-bold tracking-tight text-zinc-700"
+                    >
                       {platform.price}
                     </td>
                   ))}

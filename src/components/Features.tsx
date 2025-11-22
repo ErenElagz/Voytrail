@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '@/styles/globals.css';
 import Image from 'next/image';
 import { Accordion, AccordionItem } from '@szhsin/react-accordion';
 
@@ -38,38 +37,46 @@ export default class Features extends Component {
       },
     ];
 
+    // Reusable class strings
+    const containerClasses = 'my-20 flex w-6xl flex-col items-center justify-between gap-4 md:flex-row md:gap-16';
+    const accordionContainerClasses = 'flex flex-col gap-2 md:w-1/2';
+    const headingClasses = 'mb-4 text-3xl font-bold tracking-tight text-zinc-900';
+    const imageContainerClasses = 'flex items-center justify-center md:w-1/2';
+    const imageClasses = 'rounded-4xl border-2 border-zinc-900 shadow-2xl';
+
     return (
-      <div className="flex w-6xl flex-col my-20 gap-4 md:gap-16 md:flex-row justify-between items-center">
-        <div className="flex flex-col gap-2 md:w-1/2">
-          <h2 className="text-3xl font-bold tracking-tight text-black mb-4">Why Hosts Choose Voytrail?</h2>
-          <Accordion transition transitionTimeout={400}>
+      <div className={containerClasses}>
+        {/* Features accordion */}
+        <div className={accordionContainerClasses}>
+          <h2 className={headingClasses}>Why Hosts Choose Voytrail?</h2>
+          <Accordion transition transitionTimeout={300}>
             {data.map((item, index) => (
               <AccordionItem
                 key={index}
                 header={item.title}
                 className={({ isEnter }) =>
-                  `w-full border-2 rounded-4xl transition-all mb-2 duration-400 ${isEnter ? 'border-slate-300 bg-slate-100' : 'border-slate-200 bg-slate-50 hover:bg-slate-100'}`
+                  `mb-2 w-full rounded-4xl border-2 transition-all duration-300 ${
+                    isEnter ? 'border-zinc-300 bg-zinc-100' : 'border-zinc-200 bg-zinc-50 hover:bg-zinc-100'
+                  }`
                 }
                 buttonProps={{
                   className: ({ isEnter }) =>
-                    `flex w-full text-justify text-lg font-semibold p-6 transition-colors duration-400 ${isEnter ? 'text-slate-800 pb-2' : 'text-slate-800'}`,
+                    `flex w-full p-6 text-justify text-lg font-semibold transition-colors duration-300 ${
+                      isEnter ? 'pb-2 text-zinc-800' : 'text-zinc-800'
+                    }`,
                 }}
               >
-                <p className="text-gray-500 text-md font-medium leading-relaxed tracking-tight text-justify p-6 pt-0">
+                <p className="p-6 pt-0 text-justify text-md font-medium leading-relaxed tracking-tight text-zinc-500">
                   {item.description}
                 </p>
               </AccordionItem>
             ))}
           </Accordion>
         </div>
-        <div className="md:w-1/2 flex justify-center items-center">
-          <Image
-            src="/hero.png"
-            alt="Hero Image"
-            width={300}
-            className="rounded-4xl shadow-2xl border-2 border-black"
-            height={300}
-          />
+
+        {/* Feature image */}
+        <div className={imageContainerClasses}>
+          <Image src="/hero.png" alt="Features Preview" width={300} height={300} className={imageClasses} />
         </div>
       </div>
     );
