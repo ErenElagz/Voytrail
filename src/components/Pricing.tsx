@@ -68,7 +68,7 @@ export default function Pricing() {
   ];
 
   return (
-    <div className="w-full my-20">
+    <div className="w-full my-20" id='Pricing'>
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="w-full flex flex-col items-center gap-4 mb-12">

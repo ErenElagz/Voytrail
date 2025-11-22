@@ -25,7 +25,7 @@ export default class NavBar extends Component {
             Solutions
           </a>
           <a
-            href="#"
+            href="#Pricing"
             className="px-3 py-2 text-md font-medium tracking-tight text-zinc-500 hover:text-zinc-900 transition duration-300"
           >
             Pricing

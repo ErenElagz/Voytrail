@@ -34,7 +34,7 @@ export default function Newsletter() {
   };
 
   return (
-    <div className="w-full max-w-5xl flex flex-col my-20 mx-auto">
+    <div className="w-full max-w-5xl flex flex-col my-32 mx-auto">
       <div className="w-full bg-gradient-to-br from-slate-700 to-slate-900 rounded-4xl overflow-hidden shadow-lg">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center p-8 pr-0 md:p-12">
           {/* Content Section */}
