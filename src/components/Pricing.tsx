@@ -30,8 +30,8 @@ export default function Pricing() {
     {
       id: 'premium',
       name: 'Premium',
-      monthlyPrice: '€29.99',
-      yearlyPrice: '€299.99',
+      monthlyPrice: '€12.99',
+      yearlyPrice: '€140.99',
       badge: 'Most Popular',
       bgColor: 'bg-linear-to-br from-indigo-600 to-indigo-800 shadow-2xl transform scale-102',
       textColor: 'text-white',
@@ -68,16 +68,16 @@ export default function Pricing() {
   ];
 
   return (
-    <div className="w-full py-24 px-4">
-      <div className="max-w-7xl mx-auto">
+    <div className="w-full my-20">
+      <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="w-full flex flex-col items-center gap-4 mb-8">
+        <div className="w-full flex flex-col items-center gap-4 mb-12">
           <div>
-            <h1 className="text-4xl font-black text-slate-800 underline">Pricing</h1>
+            <h1 className="text-4xl font-black text-slate-800 underline">Pricing Plans</h1>
           </div>
 
           {/* Billing Toggle */}
-          <div className="flex justify-start items-center bg-gray-100 border-2 border-gray-200 rounded-full">
+          <div className="flex justify-start items-center bg-gray-50 border-2 border-gray-200 rounded-full">
             <button
               onClick={() => setBillingPeriod('monthly')}
               className={`px-6 py-2 font-bold rounded-full transition-all duration-300 ${
@@ -92,13 +92,13 @@ export default function Pricing() {
                 billingPeriod === 'yearly' ? 'bg-slate-800 text-white shadow-lg' : 'text-gray-600 hover:text-gray-900'
               }`}
             >
-              Yearly<span className="ml-2 text-sm font-semibold text-gray-400">(20% off)</span>
+              Yearly<span className="ml-1 text-sm font-semibold text-gray-300">(20% off)</span>
             </button>
           </div>
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-3 gap-4 mx-20 md:grid-cols-3 sm:grid-cols-1">
+        <div className="grid grid-cols-3 gap-4 md:grid-cols-3 sm:grid-cols-1">
           {plans.map((plan) => (
             <div
               key={plan.id}

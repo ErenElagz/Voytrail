@@ -10,7 +10,7 @@ export default function Testimonials() {
     {
       id: 1,
       quote: '"Framify has completely transformed my design workflow"',
-      image: '/hotel.png',
+      image: '/companies/funker-review.png',
       name: 'John Davis',
       role: 'Sales Director',
       company: 'FUNKER HOSTEL',
@@ -46,41 +46,19 @@ export default function Testimonials() {
   ];
 
   return (
-    <div className="w-full bg-gray-100 py-24 px-4">
-      <div className="max-w-7xl mx-auto">
-        {/* Header Section */}
-        <div className="flex items-start justify-between gap-8 mb-16">
-          <div className="">
-            <div className="flex items-center justify-start  gap-2 mb-4 border-2 border-gray-300 p-2 rounded-full">
-              <Icon icon="mdi:flag-outline" width={20} height={20} className="text-gray-600" />
-              <span className="text-sm font-semibold text-gray-700 uppercase tracking-wide">Testimonials</span>
-            </div>
-            <h2 className="text-5xl font-black text-gray-900 mb-0 leading-tight">
-              Trusted by Over 50+ 
-              <br /> Hostels
-           </h2>
-          </div>
-
-          <div className="flex-1 flex flex-col items-end justify-start gap-6">
-            <p className="text-lg text-gray-700 text-right">
-              Convertify has helped businesses across industries enhance their sales performance and achieve their
-              goals.
-            </p>
-            <button className="bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg">
-              Get Started Now
-            </button>
-          </div>
-        </div>
+    <div className="w-full bg-gray-100 py-20">
+      <div className="w-6xl mx-auto">
+        <h2 className="text-3xl font-bold tracking-tight text-black mb-8">Testimonials from Our Customers</h2>
 
         {/* Testimonials Carousel */}
         <div className="relative overflow-visible flex justify-center">
           {/* Carousel Container */}
           <div className="overflow-visible">
-            <div className="flex gap-6 pb-4 justify-center">
+            <div className="flex gap-3 justify-center">
               {testimonials.map((testimonial) => (
                 <div
                   key={testimonial.id}
-                  className={`flex-shrink-0 w-80 h-96 bg-gradient-to-br ${testimonial.bgColor} rounded-3xl overflow-hidden shadow-xl transition-all duration-500 relative group`}
+                  className={`flex-shrink-0 w-72 h-80 bg-gradient-to-br ${testimonial.bgColor} rounded-3xl overflow-hidden shadow-xl transition-all duration-500 relative group`}
                 >
                   {/* Background Image */}
                   <div className="absolute inset-0 overflow-hidden">
