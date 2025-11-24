@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Icon } from '@iconify/react';
 import Image from 'next/image';
+import heroImage from '@/assets/images/hero.png';
 
 export default class Hero extends Component {
   render() {
@@ -46,7 +47,7 @@ export default class Hero extends Component {
 
         {/* Hero image */}
         <div>
-          <Image src="/hero.png" alt="Hero Image" width={650} height={300} className={imageClasses} priority />
+          <Image src={heroImage} alt="Hero Image" width={650} height={300} className={imageClasses} priority />
         </div>
       </div>
     );

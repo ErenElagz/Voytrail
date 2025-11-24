@@ -3,6 +3,7 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
 import Image from 'next/image';
+import logo from '@/assets/images/logo.png';
 
 export default function Footer() {
   // Reusable class strings
@@ -24,7 +25,7 @@ export default function Footer() {
           {/* Column 1: Company info */}
           <div className="flex flex-col gap-2">
             <div className={brandContainerClasses}>
-              <Image src="/logo.png" alt="South Tours Logo" width={48} height={48} className={logoClasses} />
+              <Image src={logo} alt="South Tours Logo" width={48} height={48} className={logoClasses} />
               <div>
                 <h3 className={brandNameClasses}>Voytrail.</h3>
                 <a

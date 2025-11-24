@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import Image from 'next/image';
 import { Icon } from '@iconify/react';
+import hotel from '@/assets/images/services/hotel.png';
+import hostel from '@/assets/images/services/hostel.png';
+import airbnb from '@/assets/images/services/airbnb.png';
+import coliving from '@/assets/images/services/coliving.png';
 
 export default class ForWhom extends Component {
   render() {
@@ -9,7 +13,7 @@ export default class ForWhom extends Component {
       {
         title: 'Hotels',
         description: 'Perfect for hotels looking to streamline their online presence and boost bookings.',
-        image: '/services/hotel.png',
+        image: hotel,
         features: [
           'Live Event & Facilities Updates',
           'Smart House Guide for Guests',
@@ -20,7 +24,7 @@ export default class ForWhom extends Component {
       {
         title: 'Hostels',
         description: 'Perfect for hostels looking to streamline their online presence and boost bookings.',
-        image: '/services/hostel.png',
+        image: hostel,
         features: [
           'Weekly Events & Activity Scheduling',
           'Community Rules and House Info',
@@ -31,7 +35,7 @@ export default class ForWhom extends Component {
       {
         title: 'Airbnb Homes',
         description: 'Perfect for Airbnb homes looking to streamline their online presence and boost bookings.',
-        image: '/services/airbnb.png',
+        image: airbnb,
         features: [
           'Guest Portal with All Details',
           'Check-in & Checkout Instructions',
@@ -42,7 +46,7 @@ export default class ForWhom extends Component {
       {
         title: 'Co-Living',
         description: 'Perfect for coliving spaces looking to streamline their online presence and boost bookings.',
-        image: '/services/coliving.png',
+        image: coliving,
         features: [
           'Roommate and Shared-Space Guidelines',
           'Event Calendar for Activities',

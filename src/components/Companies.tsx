@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import Image from 'next/image';
+import funker from '@/assets/images/companies/funker.png';
+import elgranado from '@/assets/images/companies/elgranado.png';
+import thelights from '@/assets/images/companies/thelights.png';
 
 export default class Companies extends Component {
   render() {
     // Company logos data
     const companies = [
-      { name: 'Funker', image: '/funker.png' },
-      { name: 'El Granado', image: '/elgranado.png' },
-      { name: 'The Lights Hostel', image: '/thelights.png' },
+      { name: 'Funker', image: funker },
+      { name: 'El Granado', image: elgranado },
+      { name: 'The Lights Hostel', image: thelights },
     ];
 
     // Reusable class strings

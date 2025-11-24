@@ -7,6 +7,12 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 export const metadata: Metadata = {
   title: "Voytrail",
   description: "Linktree for Hospitality World",
+  icons: {
+    icon: [
+      { url: './favicon.ico' },
+      { url: './favicon-dark.ico', media: '(prefers-color-scheme: dark)' },
+    ],
+  },
 };
 
 export default function RootLayout({

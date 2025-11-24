@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Image from 'next/image';
 import { Accordion, AccordionItem } from '@szhsin/react-accordion';
+import heroImage from '@/assets/images/hero.png';
 
 export default class Features extends Component {
   render() {
@@ -72,7 +73,7 @@ export default class Features extends Component {
 
         {/* Feature image */}
         <div className={imageContainerClasses}>
-          <Image src="/hero.png" alt="Features Preview" width={300} height={300} className={imageClasses} />
+          <Image src={heroImage} alt="Features Preview" width={300} height={300} className={imageClasses} />
         </div>
       </div>
     );

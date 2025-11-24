@@ -3,6 +3,9 @@ import { Icon } from '@iconify/react';
 import '@/styles/globals.css';
 import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
+import slider1 from '@/assets/images/slider/1.png';
+import slider2 from '@/assets/images/slider/2.png';
+import slider3 from '@/assets/images/slider/3.png';
 
 const Carousel: React.FC = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }); // Changed loop to true for continuous carousel
@@ -26,7 +29,7 @@ const Carousel: React.FC = () => {
               <br /> Made Event <br /> Schedule
             </span>
             <Image
-              src="/slider/1.png"
+              src={slider1}
               alt="Carousel Image 1"
               width={600}
               height={400}
@@ -41,7 +44,7 @@ const Carousel: React.FC = () => {
             </span>
 
             <Image
-              src="/slider/2.png"
+              src={slider2}
               alt="Carousel Image 1"
               width={600}
               height={400}
@@ -56,7 +59,7 @@ const Carousel: React.FC = () => {
             </span>
 
             <Image
-              src="/slider/3.png"
+              src={slider3}
               alt="Carousel Image 1"
               width={600}
               height={400}

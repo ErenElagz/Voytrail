@@ -1,6 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 import { Icon } from '@iconify/react';
+import taplink from '@/assets/images/compares/taplink.png';
+import beacons from '@/assets/images/compares/beacons.png';
+import linktree from '@/assets/images/compares/linktree.png';
+import pallyy from '@/assets/images/compares/pallyy.png';
+import voytrail from '@/assets/images/compares/voytrail.png';
 
 export default function Compares() {
   // Comparison data configuration
@@ -65,11 +70,11 @@ export default function Compares() {
 
   // Platform comparison data
   const platforms = [
-    { key: 'taplink', name: 'Taplink', image: '/compares/taplink.png', price: '6€' },
-    { key: 'beacons', name: 'Beacons', image: '/compares/beacons.png', price: '25€' },
-    { key: 'linktree', name: 'Linktree', image: '/compares/linktree.png', price: '13€' },
-    { key: 'pallyy', name: 'Pallyy', image: '/compares/pallyy.png', price: '25€' },
-    { key: 'voytrail', name: 'VoyTrail', image: '/compares/voytrail.png', price: '12€' },
+    { key: 'taplink', name: 'Taplink', image: taplink, price: '6€' },
+    { key: 'beacons', name: 'Beacons', image: beacons, price: '25€' },
+    { key: 'linktree', name: 'Linktree', image: linktree, price: '13€' },
+    { key: 'pallyy', name: 'Pallyy', image: pallyy, price: '25€' },
+    { key: 'voytrail', name: 'VoyTrail', image: voytrail, price: '12€' },
   ];
 
   // Reusable class strings

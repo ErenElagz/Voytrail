@@ -4,13 +4,17 @@ import React from 'react';
 import Image from 'next/image';
 import '@/styles/globals.css';
 import { Icon } from '@iconify/react';
+import funkerReview from '@/assets/images/companies/funker-review.png';
+import hostel from '@/assets/images/services/hostel.png';
+import coliving from '@/assets/images/services/coliving.png';
+import cohost from '@/assets/images/services/cohost.png';
 
 export default function Testimonials() {
   const testimonials = [
     {
       id: 1,
       quote: '"Framify has completely transformed my design workflow"',
-      image: '/companies/funker-review.png',
+      image: funkerReview,
       name: 'John Davis',
       role: 'Sales Director',
       company: 'FUNKER HOSTEL',
@@ -19,7 +23,7 @@ export default function Testimonials() {
     {
       id: 2,
       quote: '"Framify has completely transformed my design workflow"',
-      image: '/hostel.png',
+      image: hostel,
       name: 'John Davis',
       role: 'Sales Director',
       company: 'EL-GRANADO',
@@ -28,7 +32,7 @@ export default function Testimonials() {
     {
       id: 3,
       quote: '"Framify has completely transformed my design workflow"',
-      image: '/coliving.png',
+      image: coliving,
       name: 'John Davis',
       role: 'Sales Director',
       company: 'COLIVING INC.',
@@ -37,7 +41,7 @@ export default function Testimonials() {
     {
       id: 4,
       quote: '"Framify has completely transformed my design workflow"',
-      image: '/cohost.png',
+      image: cohost,
       name: 'John Davis',
       role: 'Sales Director',
       company: 'COHOST LTD.',

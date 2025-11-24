@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import newsletter from '@/assets/images/misc/newsletter.png';
 
 export default function Newsletter() {
   const [email, setEmail] = useState('');
@@ -91,7 +92,7 @@ export default function Newsletter() {
           {/* Image section */}
           <div className={imageContainerClasses}>
             <div className={imageWrapperClasses}>
-              <Image src="/newsletter.png" alt="Newsletter" fill className={imageClasses} priority />
+              <Image src={newsletter} alt="Newsletter" fill className={imageClasses} priority />
             </div>
           </div>
         </div>

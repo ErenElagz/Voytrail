@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Icon } from '@iconify/react';
 import Image from 'next/image';
+import logoWhite from '@/assets/images/logo-white.png';
 
 export default class NavBar extends Component {
   render() {
@@ -23,7 +24,7 @@ export default class NavBar extends Component {
       <div className={containerClasses}>
         {/* Logo and brand */}
         <div className={logoContainerClasses}>
-          <Image src="/logo-white.png" alt="Voytrail Logo" width={40} height={40} className={logoClasses} priority />
+          <Image src={logoWhite} alt="Voytrail Logo" width={40} height={40} className={logoClasses} priority />
           <span className={brandClasses}>Voytrail.</span>
         </div>
 
