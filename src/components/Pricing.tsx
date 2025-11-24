@@ -100,7 +100,7 @@ export default function Pricing() {
                 billingPeriod === 'yearly' ? 'bg-zinc-800 text-white shadow-lg' : 'text-zinc-600 hover:text-zinc-900'
               }`}
             >
-              Yearly<span className="ml-1 text-sm font-semibold text-zinc-300">(20% off)</span>
+              Yearly<span className="ml-1 text-sm font-semibold text-zinc-400">(20% off)</span>
             </button>
           </div>
         </div>
