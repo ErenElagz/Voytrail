@@ -1,17 +1,14 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "../styles/globals.css";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import '../styles/globals.css';
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-  title: "Voytrail",
-  description: "Linktree for Hospitality World",
+  title: 'Voytrail',
+  description: 'Linktree for Hospitality World',
   icons: {
-    icon: [
-      { url: './favicon.ico' },
-      { url: './favicon-dark.ico', media: '(prefers-color-scheme: dark)' },
-    ],
+    icon: [{ url: './favicon.ico' }, { url: './favicon-dark.ico', media: '(prefers-color-scheme: dark)' }],
   },
 };
 
@@ -22,9 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` ${inter.variable} antialiased`}>
-        {children}
-      </body>
+      <body className={` ${inter.variable} antialiased`}>{children}</body>
     </html>
   );
 }
