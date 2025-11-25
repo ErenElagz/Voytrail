@@ -154,7 +154,7 @@ export default function Pricing() {
               </div>
 
               {/* CTA button */}
-              <a href="https://app.voytrail.com/login" target="_blank" rel="noopener noreferrer">
+              <a href="https://app.voytrail.com/" target="_blank" rel="noopener noreferrer">
 
               <button
                 className={`w-full rounded-2xl border-2 border-current py-2 font-bold transition-all duration-300 ${

@@ -3,12 +3,22 @@ import Image from 'next/image';
 import funker from '@/assets/images/companies/funker.png';
 import elgranado from '@/assets/images/companies/elgranado.png';
 import thelights from '@/assets/images/companies/thelights.png';
+import coeo from '@/assets/images/companies/coeo.png';
+import central from '@/assets/images/companies/central.png';
+import larios from '@/assets/images/companies/larios.png';
+import toc from '@/assets/images/companies/toc.png';
+import suiters from '@/assets/images/companies/suiters.png';
 
 export default class Companies extends Component {
   render() {
     // Company logos data
     const companies = [
       { name: 'Funker', image: funker },
+      { name: 'Larios', image: larios },
+      { name: 'The Other Corner', image: toc },
+      { name: 'Suiters', image: suiters },
+      { name: 'Central Hostel', image: central },
+      { name: 'Coeo', image: coeo },
       { name: 'El Granado', image: elgranado },
       { name: 'The Lights Hostel', image: thelights },
     ];
@@ -23,7 +33,7 @@ export default class Companies extends Component {
       <div className={containerClasses}>
         {/* Heading */}
         <div className="flex items-center">
-          <span className={headingClasses}>Trusted by Over 50+ Hostels and Hotels</span>
+          <span className={headingClasses}>Trusted by Hostels and Hotels</span>
         </div>
 
         {/* Company logos */}

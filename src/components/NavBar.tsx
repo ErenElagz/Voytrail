@@ -58,7 +58,7 @@ export default function NavBar() {
         <a href="http://" target="_blank" rel="noopener noreferrer">
           <button className={demoButtonClasses}>Get Demo</button>
         </a>
-        <a href="https://app.voytrail.com/login" target="_blank" rel="noopener noreferrer">
+        <a href="https://app.voytrail.com/" target="_blank" rel="noopener noreferrer">
           <button className={loginButtonClasses}>Login</button>
         </a>
       </div>

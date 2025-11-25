@@ -33,7 +33,7 @@ export default class Hero extends Component {
 
           {/* CTA buttons */}
           <div className={buttonContainerClasses}>
-            <a href="https://app.voytrail.com/login" target="_blank" rel="noopener noreferrer">
+            <a href="https://app.voytrail.com/" target="_blank" rel="noopener noreferrer">
               <button className={primaryButtonClasses}>
                 <Icon icon="mdi:rocket-launch" width="20" height="20" className={iconClasses} />
                 Get Started for Free
