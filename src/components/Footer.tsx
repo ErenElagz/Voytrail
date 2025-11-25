@@ -8,11 +8,11 @@ import logo from '@/assets/images/logo.png';
 export default function Footer() {
   // Reusable class strings
   const footerClasses = 'mt-20 w-full bg-gradient-to-b from-zinc-900 to-black py-16 text-white';
-  const containerClasses = 'mx-auto w-6xl px-8';
-  const gridClasses = 'mb-12 grid grid-cols-1 gap-12 md:grid-cols-3';
+  const containerClasses = 'mx-auto w-full max-w-6xl px-4 sm:px-8';
+  const gridClasses = 'mb-12 grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-12';
   const logoClasses = 'rounded-full';
   const brandContainerClasses = 'flex items-center gap-3';
-  const brandNameClasses = 'text-3xl font-black text-white';
+  const brandNameClasses = 'text-2xl sm:text-3xl font-black text-white';
   const linkClasses = 'text-sm font-medium text-zinc-400 transition-colors duration-300 hover:text-zinc-200';
   const socialButtonClasses =
     'flex h-12 w-12 scale-102 transform items-center justify-center rounded-full bg-zinc-800 transition-all duration-300 hover:bg-zinc-700';
@@ -57,9 +57,6 @@ export default function Footer() {
               <a href="/terms-of-service" className={linkClasses}>
                 Terms of Service
               </a>
-              <a href="#" className={linkClasses}>
-                Careers
-              </a>
               <a href="#Contact" className={linkClasses}>
                 Contact Us
               </a>
@@ -102,19 +99,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Divider */}
         <div className={dividerClasses}>
-          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-            <p className="text-center text-xs text-zinc-500 md:text-left">Made by South Tours Team</p>
-            <div className="flex gap-6">
-              <a href="#" className="text-sm text-zinc-500 transition-colors duration-300 hover:text-zinc-300">
-                Sitemap
-              </a>
-              <a href="#" className="text-gray-500 hover:text-gray-300 transition text-sm">
-                Cookie Policy
-              </a>
-            </div>
-          </div>
+          <p className="text-center text-sm text-zinc-500">Made with ❤️ in Malaga, Spain.</p>
         </div>
       </div>
     </footer>
