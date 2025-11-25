@@ -13,7 +13,7 @@ export default function NavBar() {
 
   // Reusable class strings
   const containerClasses =
-    'sticky top-2 z-50 mx-4 my-2 flex max-w-7xl items-center justify-between rounded-full border-2 border-zinc-100 bg-white/70 p-3 backdrop-blur-md';
+    'sticky top-2 z-50 mx-4 my-2 flex w-6xl items-center justify-between rounded-full border-2 border-zinc-100 bg-white/70 p-3 backdrop-blur-md';
   const logoContainerClasses = 'flex items-center flex-shrink-0';
   const logoClasses = 'rounded-full w-10 h-10';
   const brandClasses = 'ml-2 text-3xl font-bold text-zinc-700 pointer-events-none whitespace-nowrap';
