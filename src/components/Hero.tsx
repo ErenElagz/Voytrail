@@ -7,19 +7,19 @@ export default class Hero extends Component {
   render() {
     // Reusable class strings
     const containerClasses =
-      'pt-10 flex w-full max-w-7xl flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16 px-4 md:flex-row';
+      'pt-0 md:pt-10 flex w-full max-w-7xl flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16 px-2 md:flex-row';
     const contentClasses = 'mt-10 flex flex-col items-start px-4';
     const headingClasses =
       'mb-4 text-4xl sm:text-6xl md:text-8xl font-bold leading-tighter tracking-tighter text-zinc-800';
     const highlightClasses = 'font-extrabold text-sky-700 underline';
     const subheadingClasses = 'mb-6 text-lg sm:text-2xl leading-tight tracking-tight text-zinc-500';
-    const buttonContainerClasses = 'mt-4 flex gap-4';
+    const buttonContainerClasses = 'mt-2 md:gap-4 flex items-center md:flex-row flex-col items-start md:items-center';
     const primaryButtonClasses =
       'flex items-center justify-center rounded-full bg-sky-800 px-8 sm:px-12 py-3 font-medium text-white transition-colors duration-300 hover:bg-zinc-900';
     const iconClasses = 'mr-2 inline-block';
     const secondaryButtonClasses =
       'px-2 py-3 font-medium tracking-tight text-zinc-500 transition-colors duration-300 hover:text-zinc-900';
-    const imageClasses = 'pointer-events-none rounded-4xl border-2 border-zinc-900 shadow-2xl';
+    const imageClasses = 'pointer-events-none rounded-4xl border-2 border-zinc-900 shadow-2xl hidden sm:block';
 
     return (
       <div className={containerClasses} id="Home">

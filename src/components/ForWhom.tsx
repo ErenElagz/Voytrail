@@ -58,18 +58,18 @@ export default class ForWhom extends Component {
 
     // Reusable class strings for consistency
     const containerClasses = 'my-20 w-full bg-zinc-100 py-20';
-    const wrapperClasses = 'mx-auto max-w-6xl px-4';
+    const wrapperClasses = 'mx-auto max-w-6xl px-3';
     const headingClasses = 'mb-8 text-3xl font-bold tracking-tight text-zinc-900';
-    const gridClasses = 'grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4';
+    const gridClasses = 'grid grid-cols-2 gap-1 md:grid-cols-2 lg:grid-cols-4';
     const cardClasses =
-      'group relative h-96 overflow-hidden rounded-3xl border-2 border-zinc-200 bg-white transition-all duration-300 hover:border-zinc-300 hover:shadow-2xl';
+      'group relative h-72 md:h-96 overflow-hidden rounded-3xl border-2 border-zinc-200 bg-white transition-all duration-300 hover:border-zinc-300 hover:shadow-2xl';
     const imageContainerClasses = 'absolute inset-0 overflow-hidden';
     const imageClasses = 'h-full w-full object-cover transition-transform duration-300 group-hover:scale-110';
     const overlayClasses = 'absolute inset-0 bg-black/30';
     const contentClasses =
       'absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/80 to-transparent p-6';
     const titleClasses = 'mb-2 text-2xl font-bold text-white';
-    const descriptionClasses = 'mb-4 text-sm leading-relaxed text-zinc-200';
+    const descriptionClasses = 'mb-4 text-sm leading-relaxed text-zinc-200 hidden md:block';
     const listClasses = 'space-y-1';
     const listItemClasses = 'flex items-start gap-2';
     const iconClasses = 'mt-0.5 flex-shrink-0 text-green-400';

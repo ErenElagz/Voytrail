@@ -70,10 +70,10 @@ export default function Pricing() {
   // Reusable class strings
   const containerClasses = 'py-20 w-full';
   const wrapperClasses = 'mx-auto max-w-6xl px-4';
-  const headerClasses = 'mb-12 flex w-full flex-col items-center gap-4';
+  const headerClasses = 'mb-8 flex w-full flex-col items-center gap-4';
   const headingClasses = 'text-3xl sm:text-4xl font-black text-zinc-800 underline';
   const toggleContainerClasses = 'flex items-center justify-start rounded-full border-2 border-zinc-200 bg-zinc-50';
-  const gridClasses = 'grid grid-cols-1 md:grid-cols-3 gap-4';
+  const gridClasses = 'grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4'; ;
 
   return (
     <div className={containerClasses} id="Pricing">

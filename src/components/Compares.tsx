@@ -78,14 +78,14 @@ export default function Compares() {
 
   // Reusable class strings
   const containerClasses = 'w-full';
-  const wrapperClasses = 'mx-auto my-20 max-w-6xl px-4';
-  const headingClasses = 'mb-6 text-3xl font-bold tracking-tight text-zinc-900';
-  const tableContainerClasses = 'overflow-hidden rounded-4xl border-2 border-zinc-200 shadow-lg';
+  const wrapperClasses = 'mx-auto my-20 max-w-6xl px-0 sm:px-4';
+  const headingClasses = 'mb-6 text-2xl md:text-3xl px-4 md:px-0 font-bold tracking-tight text-zinc-900';
+  const tableContainerClasses = 'overflow-hidden rounded-0  md:rounded-4xl border-1 border-zinc-200 shadow-lg';
 
   return (
     <div className={containerClasses}>
       <div className={wrapperClasses}>
-        <h2 className={headingClasses}>Compare Voytrail with Others</h2>
+        <h2 className={headingClasses}>Compare Voytrail with Alternatives</h2>
 
         {/* Comparison Table */}
         <div className={tableContainerClasses}>
@@ -98,13 +98,7 @@ export default function Compares() {
                   {platforms.map((platform) => (
                     <th key={platform.key} className="text-center">
                       <div className="flex flex-col items-center">
-                        <Image
-                          src={platform.image}
-                          alt={platform.name}
-                          width={240}
-                          height={120}
-                          className="w-16 sm:w-auto"
-                        />
+                        <Image src={platform.image} alt={platform.name} width={240} height={120} className="w-36 sm:w-auto" />
                       </div>
                     </th>
                   ))}

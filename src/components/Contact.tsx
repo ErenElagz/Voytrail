@@ -30,28 +30,29 @@ export default function Contact() {
     }, 3000);
   };
 
-  const containerClasses = 'w-full pt-20';
+  const containerClasses = 'w-full pt-10 md:pt-20';
   const wrapperClasses = 'mx-auto max-w-6xl px-4';
 
   return (
     <div className={containerClasses} id="Contact">
       <div className={wrapperClasses}>
         {/* Header Section */}
-        <div className="mb-16 text-center">
-          <h2 className="mb-4 text-3xl sm:text-5xl font-black tracking-tight text-zinc-900">Let&apos;s Talk</h2>
-          <p className="text-xl text-zinc-600">Got a question? We&apos;re here to help.</p>
+        <div className="mb-4 md:mb-6 text-center">
+          <h2 className="text-3xl font-bold tracking-tighter text-zinc-900">Let&apos;s Talk</h2>
+          <p className="text-lg text-zinc-600">Got a question? We&apos;re here to help.</p>
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Left Side - Contact Cards */}
-          <div className="space-y-4">
+          <div className="space-y-2">
+
             {/* Email Card */}
-            <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-sky-600 to-sky-800 p-8 shadow-lg transition-transform duration-300 hover:scale-102">
+            <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-sky-600 to-sky-800 p-6 md:p-8  transition-transform duration-300 hover:scale-102">
               <div className="relative z-10">
                 <div className="mb-3 flex items-center gap-4 items-center">
                   <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-white/20 backdrop-blur-sm">
-                    <Icon icon="mdi:email" width={28} height={28} className="text-white" />
+                    <Icon icon="mdi:email" width={24} height={24} className="text-white" />
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white">Email Us</h3>
@@ -69,11 +70,11 @@ export default function Contact() {
             </div>
 
             {/* Phone Card */}
-            <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-zinc-800 to-zinc-950 p-8 shadow-lg transition-transform duration-300 hover:scale-102">
+            <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-zinc-800 to-zinc-950 p-6 md:p-8  transition-transform duration-300 hover:scale-102">
               <div className="relative z-10">
                 <div className="mb-3 flex items-center gap-4 items-center">
                   <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-sm">
-                    <Icon icon="mdi:phone" width={28} height={28} className="text-white" />
+                    <Icon icon="mdi:phone" width={24} height={24} className="text-white" />
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white">Call Us</h3>
@@ -91,11 +92,11 @@ export default function Contact() {
             </div>
 
             {/* Social Media Card */}
-            <div className="group relative overflow-hidden rounded-3xl border-2 border-zinc-200 bg-zinc-50 p-8 shadow-lg transition-all duration-300 hover:border-zinc-300 hover:bg-white">
+            <div className="group relative overflow-hidden rounded-3xl border-2 border-zinc-200 bg-zinc-50 p-6 md:p-8 transition-all duration-300 hover:border-zinc-300 hover:bg-white">
               <div className="relative z-10">
                 <div className="mb-3 flex items-center gap-4 items-center">
                   <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-zinc-900">
-                    <Icon icon="mdi:earth" width={28} height={28} className="text-white" />
+                    <Icon icon="mdi:earth" width={24} height={24} className="text-white" />
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-zinc-900">Follow Us</h3>
@@ -133,9 +134,9 @@ export default function Contact() {
           </div>
 
           {/* Right Side - Contact Form */}
-          <div className="rounded-3xl border-2 border-zinc-200 bg-white p-6 shadow-lg">
+          <div className="rounded-3xl border-2 border-zinc-200 bg-white p-6 md:p-8">
             <h3 className="mb-6 text-2xl font-bold text-zinc-900">Send us a message</h3>
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-2 md:space-y-4">
               <div>
                 <input
                   type="text"

@@ -25,7 +25,7 @@ const Carousel: React.FC = () => {
         <div className="embla__container flex">
           <div className="embla__slide  flex-shrink-0 justify-evenly flex-grow-0 basis-full py-12 min-w-0 bg-sky-50 flex flex-col md:flex-row items-center justify-center text-2xl md:text-4xl font-bold">
             <div className="flex-1 flex justify-center md:justify-end md:pr-12">
-              <span className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tighter tracking-tight text-sky-900 text-center md:text-left mb-8 md:mb-0">
+              <span className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tighter tracking-tight text-sky-900 text-center md:text-left mb-8 md:mb-0">
                 Create House <br /> Rules <span className="text-sky-500">and</span>
                 <br /> Made Event <br /> Schedule
               </span>
@@ -43,7 +43,7 @@ const Carousel: React.FC = () => {
 
           <div className="embla__slide flex-shrink-0  justify-evenly flex-grow-0 basis-full py-12 min-w-0 bg-lime-50 flex flex-col md:flex-row items-center justify-center text-2xl md:text-4xl font-bold">
             <div className="flex-1 flex justify-center md:justify-end md:pr-12">
-              <span className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tighter tracking-tight text-lime-900 text-center md:text-left mb-8 md:mb-0">
+              <span className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tighter tracking-tight text-lime-900 text-center md:text-left mb-8 md:mb-0">
                 Share Your <br /> Activites, Links
                 <br /> <span className="text-lime-500">and</span> more...
               </span>
@@ -62,7 +62,7 @@ const Carousel: React.FC = () => {
 
           <div className="embla__slide flex-shrink-0  justify-evenly flex-grow-0 basis-full py-12 min-w-0 bg-indigo-100 flex flex-col md:flex-row items-center justify-center text-2xl md:text-4xl font-bold">
             <div className="flex-1 flex justify-center md:justify-end md:pr-12">
-              <span className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tighter tracking-tight text-indigo-900 text-center md:text-left mb-8 md:mb-0">
+              <span className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tighter tracking-tight text-indigo-900 text-center md:text-left mb-8 md:mb-0">
                 Analyze Your <br /> Guests <span className="text-indigo-500">and</span>
                 <br /> Connect Your <br /> PMS
               </span>

@@ -59,7 +59,7 @@ export default function Testimonials() {
         <div className="relative overflow-visible flex justify-center">
           {/* Carousel Container */}
           <div className="overflow-visible w-full">
-            <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
+            <div className="flex flex-col md:flex-row gap-2 justify-center items-center">
               {testimonials.map((testimonial) => (
                 <div
                   key={testimonial.id}

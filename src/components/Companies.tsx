@@ -25,10 +25,10 @@ export default class Companies extends Component {
 
     // Reusable class strings
     const containerClasses = 'mx-auto mt-10 sm:mt-20 flex max-w-7xl w-full flex-col items-center gap-10 px-4';
-    const headingClasses = 'text-3xl font-bold tracking-tight text-zinc-900 text-center';
-    const logoContainerClasses = 'flex flex-wrap items-center justify-center gap-6 sm:gap-10';
+    const headingClasses = 'text-2xl md:text-3xl font-bold tracking-tight text-zinc-900 text-center';
+    const logoContainerClasses = 'flex flex-wrap items-center justify-center gap-4 sm:gap-4';
     const logoClasses =
-      'grayscale opacity-30 object-contain transition-opacity duration-300 hover:opacity-100 w-24 sm:w-40';
+      'grayscale opacity-30 object-contain transition-opacity duration-300 hover:opacity-100 w-20 sm:w-32';
 
     return (
       <div className={containerClasses}>

@@ -22,7 +22,7 @@ export default function Videos() {
             light
             style={{
               width: '100%',
-              height: 'auto',
+              height: 'h-auto ',
               aspectRatio: '16/9',
             }}
           />
