@@ -58,7 +58,7 @@ export default class ForWhom extends Component {
 
     // Reusable class strings for consistency
     const containerClasses = 'my-20 w-full bg-zinc-100 py-20';
-    const wrapperClasses = 'mx-auto w-6xl';
+    const wrapperClasses = 'mx-auto max-w-6xl px-4';
     const headingClasses = 'mb-8 text-3xl font-bold tracking-tight text-zinc-900';
     const gridClasses = 'grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4';
     const cardClasses =

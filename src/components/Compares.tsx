@@ -78,7 +78,7 @@ export default function Compares() {
 
   // Reusable class strings
   const containerClasses = 'w-full';
-  const wrapperClasses = 'mx-auto my-20 max-w-6xl';
+  const wrapperClasses = 'mx-auto my-20 max-w-6xl px-4';
   const headingClasses = 'mb-6 text-3xl font-bold tracking-tight text-zinc-900';
   const tableContainerClasses = 'overflow-hidden rounded-4xl border-2 border-zinc-200 shadow-lg';
 
@@ -98,7 +98,13 @@ export default function Compares() {
                   {platforms.map((platform) => (
                     <th key={platform.key} className="text-center">
                       <div className="flex flex-col items-center">
-                        <Image src={platform.image} alt={platform.name} width={240} height={120} className="" />
+                        <Image
+                          src={platform.image}
+                          alt={platform.name}
+                          width={240}
+                          height={120}
+                          className="w-16 sm:w-auto"
+                        />
                       </div>
                     </th>
                   ))}
@@ -112,9 +118,9 @@ export default function Compares() {
                     key={rowIndex}
                     className="border-t border-zinc-200 transition-colors duration-300 hover:bg-zinc-100"
                   >
-                    <td className="group relative bg-zinc-50 px-4 py-5 text-left font-semibold text-zinc-500">
+                    <td className="group relative bg-zinc-50 px-2 py-3 sm:px-4 sm:py-5 text-left font-semibold text-zinc-500">
                       <div className="flex items-center gap-3 underline">
-                        <span>{row.feature}</span>
+                        <span className="text-sm sm:text-base">{row.feature}</span>
                         <div className="relative ml-auto flex items-center ">
                           <Icon
                             icon="mdi:help-circle-outline"
@@ -130,7 +136,7 @@ export default function Compares() {
                       </div>
                     </td>
                     {platforms.map((platform) => (
-                      <td key={platform.key} className="px-4 py-5 text-center">
+                      <td key={platform.key} className="px-2 py-3 sm:px-4 sm:py-5 text-center">
                         {row[platform.key as keyof typeof row] ? (
                           <Icon icon="mdi:check-circle" width={28} height={28} className="mx-auto text-green-600" />
                         ) : (
@@ -143,11 +149,11 @@ export default function Compares() {
 
                 {/* Pricing row */}
                 <tr className="border-t border-zinc-200 bg-zinc-50 font-bold">
-                  <td className="px-4 py-6 text-left text-zinc-800">Pricing</td>
+                  <td className="px-2 py-3 sm:px-4 sm:py-6 text-left text-zinc-800">Pricing</td>
                   {platforms.map((platform) => (
                     <td
                       key={platform.key}
-                      className="px-4 py-4 text-center text-3xl font-bold tracking-tight text-zinc-700"
+                      className="px-2 py-3 sm:px-4 sm:py-4 text-center text-xl sm:text-3xl font-bold tracking-tight text-zinc-700"
                     >
                       {platform.price}
                     </td>

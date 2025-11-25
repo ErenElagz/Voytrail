@@ -30,20 +30,20 @@ export default function Contact() {
     }, 3000);
   };
 
-  const containerClasses = 'w-full pt-25';
-  const wrapperClasses = 'mx-auto max-w-6xl';
+  const containerClasses = 'w-full pt-20';
+  const wrapperClasses = 'mx-auto max-w-6xl px-4';
 
   return (
     <div className={containerClasses} id="Contact">
       <div className={wrapperClasses}>
         {/* Header Section */}
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-5xl font-black tracking-tight text-zinc-900">Let&apos;s Talk</h2>
+          <h2 className="mb-4 text-3xl sm:text-5xl font-black tracking-tight text-zinc-900">Let&apos;s Talk</h2>
           <p className="text-xl text-zinc-600">Got a question? We&apos;re here to help.</p>
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Side - Contact Cards */}
           <div className="space-y-4">
             {/* Email Card */}

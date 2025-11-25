@@ -52,18 +52,18 @@ export default function Testimonials() {
 
   return (
     <div className="w-full bg-gray-100 py-20">
-      <div className="w-6xl mx-auto">
+      <div className="w-full max-w-6xl mx-auto px-4">
         <h2 className="text-3xl font-bold tracking-tight text-black mb-8">Testimonials from Our Customers</h2>
 
         {/* Testimonials Carousel */}
         <div className="relative overflow-visible flex justify-center">
           {/* Carousel Container */}
-          <div className="overflow-visible">
-            <div className="flex gap-3 justify-center">
+          <div className="overflow-visible w-full">
+            <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
               {testimonials.map((testimonial) => (
                 <div
                   key={testimonial.id}
-                  className={`flex-shrink-0 w-72 h-80 bg-gradient-to-br ${testimonial.bgColor} rounded-3xl overflow-hidden shadow-xl transition-all duration-500 relative group`}
+                  className={`flex-shrink-0 w-full max-w-sm h-80 md:w-72 bg-gradient-to-br ${testimonial.bgColor} rounded-3xl overflow-hidden shadow-xl transition-all duration-500 relative group`}
                 >
                   {/* Background Image */}
                   <div className="absolute inset-0 overflow-hidden">

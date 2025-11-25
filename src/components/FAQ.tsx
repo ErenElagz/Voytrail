@@ -37,9 +37,11 @@ export default class FAQ extends React.Component {
     ];
 
     return (
-      <div className=" w-7xl flex-col my-20 gap-4 md:gap-16 items-center">
-        <h2 className="mb-4 text-3xl font-bold tracking-tight text-slate-900 text-center">Frequently Asked Questions</h2>
-        <Accordion transition transitionTimeout={400} className="w-2/3 mx-auto">
+      <div className="max-w-7xl mx-auto flex flex-col my-20 gap-8 md:gap-16 items-center px-4">
+        <h2 className="mb-4 text-3xl font-bold tracking-tight text-slate-900 text-center">
+          Frequently Asked Questions
+        </h2>
+        <Accordion transition transitionTimeout={400} className="w-full max-w-4xl mx-auto">
           {data.map((item, index) => (
             <AccordionItem
               key={index}
@@ -49,9 +51,9 @@ export default class FAQ extends React.Component {
               }
               buttonProps={{
                 className: ({ isEnter }) =>
-                  `flex w-full text-justify text-lg font-semibold p-6 transition-colors duration-400 ${isEnter ? 'text-slate-800 pb-2' : 'text-slate-800 '}`,
+                  `flex w-full text-left text-lg font-semibold p-6 transition-colors duration-400 ${isEnter ? 'text-slate-800 pb-2' : 'text-slate-800 '}`,
               }}
-            > 
+            >
               <p className="text-gray-500 text-md font-medium leading-relaxed tracking-tight text-justify p-6 pt-0">
                 {item.description}
               </p>

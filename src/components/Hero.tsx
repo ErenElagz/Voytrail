@@ -6,14 +6,16 @@ import heroImage from '@/assets/images/hero.png';
 export default class Hero extends Component {
   render() {
     // Reusable class strings
-    const containerClasses = 'pt-10 flex w-full max-w-7xl flex-col justify-center gap-16 px-4 md:flex-row';
+    const containerClasses =
+      'pt-10 flex w-full max-w-7xl flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16 px-4 md:flex-row';
     const contentClasses = 'mt-10 flex flex-col items-start px-4';
-    const headingClasses = 'mb-4 text-8xl font-bold leading-tighter tracking-tighter text-zinc-800';
+    const headingClasses =
+      'mb-4 text-4xl sm:text-6xl md:text-8xl font-bold leading-tighter tracking-tighter text-zinc-800';
     const highlightClasses = 'font-extrabold text-sky-700 underline';
-    const subheadingClasses = 'mb-6 text-2xl leading-tight tracking-tight text-zinc-500';
+    const subheadingClasses = 'mb-6 text-lg sm:text-2xl leading-tight tracking-tight text-zinc-500';
     const buttonContainerClasses = 'mt-4 flex gap-4';
     const primaryButtonClasses =
-      'flex items-center justify-center rounded-full bg-sky-800 px-12 py-3 font-medium text-white transition-colors duration-300 hover:bg-zinc-900';
+      'flex items-center justify-center rounded-full bg-sky-800 px-8 sm:px-12 py-3 font-medium text-white transition-colors duration-300 hover:bg-zinc-900';
     const iconClasses = 'mr-2 inline-block';
     const secondaryButtonClasses =
       'px-2 py-3 font-medium tracking-tight text-zinc-500 transition-colors duration-300 hover:text-zinc-900';

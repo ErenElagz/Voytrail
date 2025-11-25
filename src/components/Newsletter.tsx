@@ -34,11 +34,11 @@ export default function Newsletter() {
   };
 
   // Reusable class strings
-  const containerClasses = 'mx-auto my-32 flex w-full max-w-5xl flex-col';
+  const containerClasses = 'mx-auto my-20 flex w-full max-w-5xl flex-col px-4';
   const cardClasses = 'w-full overflow-hidden rounded-4xl bg-gradient-to-br from-sky-700 to-sky-950 shadow-lg';
   const gridClasses = 'grid grid-cols-1 items-center gap-8 p-8 pr-0 md:grid-cols-2 md:p-12';
   const contentClasses = 'flex flex-col justify-center gap-4';
-  const headingClasses = 'text-4xl font-black text-white md:text-5xl';
+  const headingClasses = 'text-3xl font-black text-white md:text-5xl';
   const descriptionClasses = 'text-lg text-zinc-300';
   const formClasses = 'mt-4 flex flex-col gap-3';
   const inputContainerClasses = 'flex flex-col gap-2 sm:flex-row';
@@ -48,7 +48,7 @@ export default function Newsletter() {
     'rounded-lg bg-zinc-800 px-4 py-2 font-medium text-white transition-all duration-300 hover:bg-zinc-600 disabled:cursor-not-allowed disabled:opacity-50';
   const privacyClasses = 'mt-2 text-sm text-zinc-300';
   const imageContainerClasses = 'flex justify-center';
-  const imageWrapperClasses = 'relative h-64 w-full md:h-80';
+  const imageWrapperClasses = 'relative h-48 w-full md:h-80';
   const imageClasses = 'object-contain';
 
   return (
