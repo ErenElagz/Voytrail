@@ -11,3 +11,4 @@ export { default as Pricing } from './Pricing';
 export { default as Newsletter } from './Newsletter';
 export { default as FAQ } from './FAQ';
 export { default as Testimonials } from './Testimonials';
+export { default as Contact } from './Contact';

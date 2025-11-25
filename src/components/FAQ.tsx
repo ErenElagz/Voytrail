@@ -51,7 +51,7 @@ export default class FAQ extends React.Component {
                 className: ({ isEnter }) =>
                   `flex w-full text-justify text-lg font-semibold p-6 transition-colors duration-400 ${isEnter ? 'text-slate-800 pb-2' : 'text-slate-800 '}`,
               }}
-            >
+            > 
               <p className="text-gray-500 text-md font-medium leading-relaxed tracking-tight text-justify p-6 pt-0">
                 {item.description}
               </p>

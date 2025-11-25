@@ -68,7 +68,7 @@ export default function Pricing() {
   ];
 
   // Reusable class strings
-  const containerClasses = 'my-20 w-full';
+  const containerClasses = 'py-20 w-full';
   const wrapperClasses = 'mx-auto max-w-6xl';
   const headerClasses = 'mb-12 flex w-full flex-col items-center gap-4';
   const headingClasses = 'text-4xl font-black text-zinc-800 underline';

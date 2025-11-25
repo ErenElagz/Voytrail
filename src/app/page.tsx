@@ -14,6 +14,7 @@ import {
   Newsletter,
   FAQ,
   Testimonials,
+  Contact,
 } from '@/components';
 
 export default function Home() {
@@ -31,6 +32,7 @@ export default function Home() {
       <Testimonials />
       <Newsletter />
       <FAQ />
+      <Contact />
       <Footer />
     </div>
   );

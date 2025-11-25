@@ -48,20 +48,20 @@ export default function Footer() {
           <div className="flex flex-col gap-2">
             <h4 className="text-lg font-bold text-white">Quick Links</h4>
             <nav className="flex flex-col gap-3">
-              <a href="#" className={linkClasses}>
+              <a href="#Pricing" className={linkClasses}>
                 Pricing
               </a>
-              <a href="#" className={linkClasses}>
+              <a href="/privacy-policy" className={linkClasses}>
                 Privacy Policy
+              </a>
+              <a href="/terms-of-service" className={linkClasses}>
+                Terms of Service
               </a>
               <a href="#" className={linkClasses}>
                 Careers
               </a>
-              <a href="#" className={linkClasses}>
+              <a href="#Contact" className={linkClasses}>
                 Contact Us
-              </a>
-              <a href="#" className={linkClasses}>
-                Terms of Service
               </a>
             </nav>
           </div>

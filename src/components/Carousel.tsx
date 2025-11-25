@@ -20,7 +20,7 @@ const Carousel: React.FC = () => {
   }, [emblaApi]);
 
   return (
-    <div className="embla overflow-hidden w-full mx-auto my-15">
+    <div className="embla overflow-hidden w-full mx-auto mt-20">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container flex">
           <div className="embla__slide  flex-shrink-0 justify-evenly flex-grow-0 basis-full px-20 py-12 min-w-0 bg-sky-50 flex items-center justify-center text-4xl font-bold">

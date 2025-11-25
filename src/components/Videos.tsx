@@ -10,7 +10,7 @@ export default function Videos() {
   ];
 
   return (
-    <div className="w-6xl mx-auto my-20">
+    <div className="w-6xl mx-auto mt-20">
       <h2 className="text-3xl font-bold tracking-tight text-black mb-8">Watch How it Works</h2>
 
       <div className="flex gap-2">
