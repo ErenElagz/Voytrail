@@ -104,19 +104,25 @@ export default function Contact() {
                 </div>
                 <div className="flex gap-3">
                   <a
-                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.facebook.com/southtoursmalaga/"
                     className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-900 text-white transition-transform duration-300 hover:scale-110"
                   >
-                    <Icon icon="mdi:twitter" width={20} height={20} />
+                    <Icon icon="mdi:facebook" width={20} height={20} />
                   </a>
                   <a
-                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/company/south-tours-malaga/posts/?feedView=all"
                     className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-900 text-white transition-transform duration-300 hover:scale-110"
                   >
                     <Icon icon="mdi:linkedin" width={20} height={20} />
                   </a>
                   <a
-                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/southtours/?hl=en"
                     className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-900 text-white transition-transform duration-300 hover:scale-110"
                   >
                     <Icon icon="mdi:instagram" width={20} height={20} />

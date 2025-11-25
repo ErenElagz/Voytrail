@@ -6,7 +6,7 @@ import heroImage from '@/assets/images/hero.png';
 export default class Hero extends Component {
   render() {
     // Reusable class strings
-    const containerClasses = 'pt-10 flex w-full max-w-7xl flex-col justify-center gap-4 px-4 md:flex-row md:gap-16';
+    const containerClasses = 'pt-5 flex w-full max-w-7xl flex-col justify-center gap-4 px-4 md:flex-row md:gap-16';
     const contentClasses = 'mt-4 md:mt-10 flex flex-col items-start px-2 md:px-4';
     const headingClasses =
       'mb-4 text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight md:leading-tighter tracking-tighter text-zinc-800';

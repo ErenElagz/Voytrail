@@ -28,7 +28,7 @@ export default class Companies extends Component {
     const headingClasses = 'text-xl sm:text-2xl md:text-3xl font-bold tracking-tight text-zinc-900 text-center';
     const logoContainerClasses = 'flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-10';
     const logoClasses =
-      'grayscale opacity-30 object-contain transition-opacity duration-300 hover:opacity-100 w-24 sm:w-32 md:w-40 h-auto';
+      'grayscale opacity-30 pointer-events-none cursor-default object-contain transition-opacity duration-300 hover:opacity-100 w-24 sm:w-32 md:w-40 h-auto';
 
     return (
       <div className={containerClasses}>

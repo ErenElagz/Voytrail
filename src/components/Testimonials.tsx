@@ -5,47 +5,48 @@ import Image from 'next/image';
 import '@/styles/globals.css';
 import { Icon } from '@iconify/react';
 import funkerReview from '@/assets/images/companies/funker-review.png';
-import hostel from '@/assets/images/services/hostel.png';
-import coliving from '@/assets/images/services/coliving.png';
-import cohost from '@/assets/images/services/cohost.png';
+import centralReview from '@/assets/images/companies/central-review.png';
+import tocReview from '@/assets/images/companies/toc-review.png';
+import suitersReview from '@/assets/images/companies/suiters-review.png';
 
 export default function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      quote: '"Framify has completely transformed my design workflow"',
+      quote: 'Better than Linktree, Voytrail makes sharing all our booking links effortless."',
       image: funkerReview,
       name: 'John Davis',
-      role: 'Sales Director',
+      role: 'Director',
       company: 'FUNKER HOSTEL',
-      bgColor: 'from-purple-400 to-purple-600',
+      bgColor: 'from-gray-700 to-gray-900',
     },
     {
       id: 2,
-      quote: '"Framify has completely transformed my design workflow"',
-      image: hostel,
-      name: 'John Davis',
-      role: 'Sales Director',
-      company: 'EL-GRANADO',
-      bgColor: 'from-gray-600 to-gray-800',
+      quote: '"With Voytrail, our guests can easily find every booking option in one place."',
+      image: centralReview,
+      name: 'Maria Lopez',
+      role: 'Manager',
+      company: 'CENTRAL HOSTEL',
+      bgColor: 'from-gray-700 to-gray-900',
     },
     {
       id: 3,
-      quote: '"Framify has completely transformed my design workflow"',
-      image: coliving,
-      name: 'John Davis',
-      role: 'Sales Director',
-      company: 'COLIVING INC.',
-      bgColor: 'from-orange-400 via-yellow-300 to-green-400',
+      quote: '"Voytrail streamlines our online presence. Our bookings have increased!"',
+      image: tocReview,
+      name: 'Alex Kim',
+      role: 'Manager',
+      company: 'TOC HOSTEL',
+      bgColor: 'from-gray-700 to-gray-900',
     },
     {
       id: 4,
-      quote: '"Framify has completely transformed my design workflow"',
-      image: cohost,
-      name: 'John Davis',
-      role: 'Sales Director',
-      company: 'COHOST LTD.',
-      bgColor: 'from-blue-400 to-blue-600',
+      quote:
+        '"We love how Voytrail brings all our booking channels together. It’s the perfect Linktree alternative for our co-living space."',
+      image: suitersReview,
+      name: 'Sophie Martin',
+      role: 'Manager',
+      company: 'SUITERS CoLiving',
+      bgColor: 'from-gray-700 to-gray-900',
     },
   ];
 
@@ -70,7 +71,7 @@ export default function Testimonials() {
                       src={testimonial.image}
                       alt={testimonial.name}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
 
