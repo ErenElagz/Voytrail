@@ -36,7 +36,7 @@ export default function Pricing() {
       bgColor: 'scale-102 transform bg-gradient-to-br from-sky-600 to-sky-950 shadow-2xl',
       textColor: 'text-white',
       buttonBg: 'bg-white text-zinc-950 hover:bg-zinc-100',
-      badgeBg: 'bg-sky-950 shadow-2xl' ,
+      badgeBg: 'bg-sky-950 shadow-2xl',
       features: [
         { name: 'Full Analytics', tooltip: 'Enterprise analytics' },
         { name: 'User Behavior Insights', tooltip: 'Advanced user tracking' },
@@ -73,7 +73,7 @@ export default function Pricing() {
   const headerClasses = 'mb-12 flex w-full flex-col items-center gap-4';
   const headingClasses = 'text-4xl font-black text-zinc-800 underline';
   const toggleContainerClasses = 'flex items-center justify-start rounded-full border-2 border-zinc-200 bg-zinc-50';
-  const gridClasses = 'grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-3';
+  const gridClasses = 'grid grid-cols-3 gap-4';
 
   return (
     <div className={containerClasses} id="Pricing">
@@ -155,18 +155,17 @@ export default function Pricing() {
 
               {/* CTA button */}
               <a href="https://app.voytrail.com/" target="_blank" rel="noopener noreferrer">
-
-              <button
-                className={`w-full rounded-2xl border-2 border-current py-2 font-bold transition-all duration-300 ${
-                  plan.name === 'Premium'
-                    ? 'bg-white text-sky-900 hover:bg-sky-800 hover:text-white'
-                    : plan.bgColor.includes('zinc-50')
-                      ? `${plan.textColor} hover:bg-zinc-800 hover:text-white`
-                      : `${plan.textColor} hover:bg-zinc-100 hover:text-zinc-800`
-                }`}
-              >
-                {plan.cta}
-              </button>
+                <button
+                  className={`w-full rounded-2xl border-2 border-current py-2 font-bold transition-all duration-300 ${
+                    plan.name === 'Premium'
+                      ? 'bg-white text-sky-900 hover:bg-sky-800 hover:text-white'
+                      : plan.bgColor.includes('zinc-50')
+                        ? `${plan.textColor} hover:bg-zinc-800 hover:text-white`
+                        : `${plan.textColor} hover:bg-zinc-100 hover:text-zinc-800`
+                  }`}
+                >
+                  {plan.cta}
+                </button>
               </a>
             </div>
           ))}

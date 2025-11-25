@@ -24,11 +24,10 @@ export default class Companies extends Component {
     ];
 
     // Reusable class strings
-    const containerClasses = 'mx-auto mt-20 flex w-7xl max-w-full flex-col items-center gap-10 px-4';
-    const headingClasses = 'text-xl sm:text-2xl md:text-3xl font-bold tracking-tight text-zinc-900 text-center';
-    const logoContainerClasses = 'flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-10';
-    const logoClasses =
-      'grayscale opacity-30 pointer-events-none cursor-default object-contain transition-opacity duration-300 hover:opacity-100 w-24 sm:w-32 md:w-40 h-auto';
+    const containerClasses = 'mx-auto mt-20 flex w-7xl max-w-full flex-col items-center gap-10';
+    const headingClasses = 'text-3xl font-bold tracking-tight text-zinc-900';
+    const logoContainerClasses = 'flex items-center justify-center gap-10';
+    const logoClasses = 'grayscale opacity-30 object-contain transition-opacity duration-300 hover:opacity-100';
 
     return (
       <div className={containerClasses}>
@@ -40,9 +39,14 @@ export default class Companies extends Component {
         {/* Company logos */}
         <div className={logoContainerClasses}>
           {companies.map((company) => (
-            <div key={company.name} className="w-24 sm:w-32 md:w-40">
-              <Image src={company.image} alt={company.name} width={160} height={80} className={logoClasses} />
-            </div>
+            <Image
+              key={company.name}
+              src={company.image}
+              alt={company.name}
+              width={160}
+              height={80}
+              className={logoClasses}
+            />
           ))}
         </div>
       </div>

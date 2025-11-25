@@ -31,7 +31,7 @@ export default function Contact() {
   };
 
   const containerClasses = 'w-full pt-25';
-  const wrapperClasses = 'mx-auto max-w-6xl px-4';
+  const wrapperClasses = 'mx-auto max-w-6xl';
 
   return (
     <div className={containerClasses} id="Contact">
@@ -43,7 +43,7 @@ export default function Contact() {
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+        <div className="grid grid-cols-2 gap-4">
           {/* Left Side - Contact Cards */}
           <div className="space-y-4">
             {/* Email Card */}

@@ -77,16 +77,15 @@ export default function Compares() {
   ];
 
   // Reusable class strings
-  const containerClasses = 'w-full px-4';
+  const containerClasses = 'w-full';
   const wrapperClasses = 'mx-auto my-20 max-w-6xl';
-  const headingClasses = 'mb-6 text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900';
-  const tableContainerClasses = 'overflow-hidden rounded-3xl sm:rounded-4xl border-2 border-zinc-200 shadow-lg';
+  const headingClasses = 'mb-6 text-3xl font-bold tracking-tight text-zinc-900';
+  const tableContainerClasses = 'overflow-hidden rounded-4xl border-2 border-zinc-200 shadow-lg';
 
   return (
     <div className={containerClasses}>
       <div className={wrapperClasses}>
         <h2 className={headingClasses}>Compare Voytrail with Others</h2>
-        <p className="mb-4 text-sm text-zinc-500 md:hidden">← Scroll horizontally to see all platforms →</p>
 
         {/* Comparison Table */}
         <div className={tableContainerClasses}>
