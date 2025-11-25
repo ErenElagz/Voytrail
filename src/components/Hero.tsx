@@ -7,7 +7,7 @@ export default class Hero extends Component {
   render() {
     // Reusable class strings
     const containerClasses =
-      'mb-20 mt-10 flex w-full max-w-7xl flex-col justify-center gap-4 px-4 md:flex-row md:gap-16';
+      'pt-10 flex w-full max-w-7xl flex-col justify-center gap-4 px-4 md:flex-row md:gap-16';
     const contentClasses = 'mt-10 flex flex-col items-start px-4';
     const headingClasses = 'mb-4 text-8xl font-bold leading-tighter tracking-tighter text-zinc-800';
     const highlightClasses = 'font-extrabold text-sky-700 underline';
@@ -21,7 +21,7 @@ export default class Hero extends Component {
     const imageClasses = 'pointer-events-none rounded-4xl border-2 border-zinc-900 shadow-2xl';
 
     return (
-      <div className={containerClasses}>
+      <div className={containerClasses} id="Home">
         {/* Hero content */}
         <div className={contentClasses}>
           <h1 className={headingClasses}>

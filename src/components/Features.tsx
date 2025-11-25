@@ -39,14 +39,14 @@ export default class Features extends Component {
     ];
 
     // Reusable class strings
-    const containerClasses = 'my-20 flex w-6xl flex-col items-center justify-between gap-4 md:flex-row md:gap-16';
+    const containerClasses = 'pt-25 flex w-6xl flex-col items-center justify-between gap-4 md:flex-row md:gap-16';
     const accordionContainerClasses = 'flex flex-col gap-2 md:w-1/2';
     const headingClasses = 'mb-4 text-3xl font-bold tracking-tight text-zinc-900';
     const imageContainerClasses = 'flex items-center justify-center md:w-1/2';
     const imageClasses = 'rounded-4xl border-2 border-zinc-900 shadow-2xl';
 
     return (
-      <div className={containerClasses}>
+      <div className={containerClasses} id="Features">
         {/* Features accordion */}
         <div className={accordionContainerClasses}>
           <h2 className={headingClasses}>Why Hosts Choose Voytrail?</h2>

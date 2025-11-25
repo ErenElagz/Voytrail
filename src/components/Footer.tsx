@@ -19,7 +19,7 @@ export default function Footer() {
   const dividerClasses = 'mt-8 border-t border-zinc-800 pt-8';
 
   return (
-    <footer className={footerClasses}>
+    <footer className={footerClasses} id="Contact">
       <div className={containerClasses}>
         <div className={gridClasses}>
           {/* Column 1: Company info */}

@@ -21,7 +21,18 @@ export default function Compares() {
     },
     {
       feature: 'Accommodation-Specific Modules',
-      tooltip: 'Specialized modules for accommodation properties with guest manuals, housing info, and check-in features',
+      tooltip:
+        'Specialized modules for accommodation properties with guest manuals, housing info, and check-in features',
+      taplink: false,
+      beacons: false,
+      linktree: false,
+      bitly: false,
+      voytrail: true,
+    },
+
+    {
+      feature: 'Event/Calendar Cards',
+      tooltip: 'Display event and calendar data with customized cards for property-specific information',
       taplink: false,
       beacons: false,
       linktree: false,
@@ -34,15 +45,6 @@ export default function Compares() {
       taplink: false,
       beacons: true,
       linktree: true,
-      bitly: false,
-      voytrail: true,
-    },
-    {
-      feature: 'Event/Calendar Cards',
-      tooltip: 'Display event and calendar data with customized cards for property-specific information',
-      taplink: false,
-      beacons: false,
-      linktree: false,
       bitly: false,
       voytrail: true,
     },
@@ -68,9 +70,9 @@ export default function Compares() {
   // Platform comparison data
   const platforms = [
     { key: 'taplink', name: 'Taplink', image: taplink, price: '12€/mo' },
+    { key: 'bitly', name: 'bitly', image: bitly, price: '99€/mo' },
     { key: 'beacons', name: 'Beacons', image: beacons, price: '26€/mo' },
     { key: 'linktree', name: 'Linktree', image: linktree, price: '32€/mo' },
-    { key: 'bitly', name: 'bitly', image: bitly, price: '99€/mo' },
     { key: 'voytrail', name: 'VoyTrail', image: voytrail, price: '13€/mo' },
   ];
 
@@ -96,13 +98,7 @@ export default function Compares() {
                   {platforms.map((platform) => (
                     <th key={platform.key} className="text-center">
                       <div className="flex flex-col items-center">
-                        <Image
-                          src={platform.image}
-                          alt={platform.name}
-                          width={240}
-                          height={120}
-                          className=""
-                        />
+                        <Image src={platform.image} alt={platform.name} width={240} height={120} className="" />
                       </div>
                     </th>
                   ))}

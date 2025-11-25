@@ -31,7 +31,7 @@ export default function Pricing() {
       id: 'premium',
       name: 'Premium',
       monthlyPrice: '€12.99',
-      yearlyPrice: '€140.99',
+      yearlyPrice: '€124.49',
       badge: 'Most Popular',
       bgColor: 'scale-102 transform bg-gradient-to-br from-sky-600 to-sky-950 shadow-2xl',
       textColor: 'text-white',

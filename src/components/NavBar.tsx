@@ -8,9 +8,9 @@ export default class NavBar extends Component {
     // Reusable class strings
     const containerClasses =
       'sticky top-2 z-50 mx-4 my-2 flex w-5xl items-center justify-between rounded-full border-2 border-zinc-100 bg-white/70 p-2 backdrop-blur-md';
-    const logoContainerClasses = 'flex w-full items-center';
+    const logoContainerClasses = 'flex w-full items-center' ;
     const logoClasses = 'rounded-full';
-    const brandClasses = 'ml-2 text-2xl font-bold text-zinc-700';
+    const brandClasses = 'ml-2 text-3xl font-bold text-zinc-700 pointer-events-none';
     const navClasses = 'flex items-center gap-4';
     const linkClasses =
       'px-3 py-2 text-md font-medium tracking-tight text-zinc-500 transition-colors duration-300 hover:text-zinc-900';
@@ -23,23 +23,23 @@ export default class NavBar extends Component {
     return (
       <div className={containerClasses}>
         {/* Logo and brand */}
-        <div className={logoContainerClasses}>
+        <a className={logoContainerClasses} href="#Home">
           <Image src={logoWhite} alt="Voytrail Logo" width={40} height={40} className={logoClasses} priority />
-          <span className={brandClasses}>Voytrail.</span>
-        </div>
+          <span className={brandClasses}>voytrail.</span>
+        </a>
 
         {/* Navigation links */}
         <nav className={navClasses}>
-          <a href="#" className={linkClasses}>
+          <a href="#Home" className={linkClasses}>
             Home
           </a>
-          <a href="#" className={linkClasses}>
+          <a href="#Features" className={linkClasses}>
             Solutions
           </a>
           <a href="#Pricing" className={linkClasses}>
             Pricing
           </a>
-          <a href="#" className={linkClasses}>
+          <a href="#Contact" className={linkClasses}>
             Contact
           </a>
         </nav>
