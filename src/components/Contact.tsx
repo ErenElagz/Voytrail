@@ -11,6 +11,8 @@ export default function Contact() {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -18,16 +20,40 @@ export default function Contact() {
       ...prev,
       [name]: value,
     }));
+    setErrorMessage('');
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: '', email: '', message: '' });
-    }, 3000);
+    setIsLoading(true);
+    setErrorMessage('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '', message: '' });
+        setTimeout(() => {
+          setIsSubmitted(false);
+        }, 5000);
+      } else {
+        setErrorMessage(data.error || 'Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      console.error('Contact form error:', error);
+      setErrorMessage('Failed to send message. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const containerClasses = 'w-full pt-10 md:pt-20';
@@ -46,7 +72,6 @@ export default function Contact() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Left Side - Contact Cards */}
           <div className="space-y-2">
-
             {/* Email Card */}
             <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-sky-600 to-sky-800 p-6 md:p-8  transition-transform duration-300 hover:scale-102">
               <div className="relative z-10">
@@ -179,9 +204,14 @@ export default function Contact() {
               <button
                 type="submit"
                 className="w-full rounded-2xl bg-zinc-900 px-6 py-4 text-lg font-bold text-white transition-all duration-300 hover:bg-zinc-800 disabled:bg-zinc-400"
-                disabled={isSubmitted}
+                disabled={isLoading || isSubmitted}
               >
-                {isSubmitted ? (
+                {isLoading ? (
+                  <span className="flex items-center justify-center gap-2">
+                    <Icon icon="mdi:loading" width={24} height={24} className="animate-spin" />
+                    Sending...
+                  </span>
+                ) : isSubmitted ? (
                   <span className="flex items-center justify-center gap-2">
                     <Icon icon="mdi:check-circle" width={24} height={24} />
                     Sent Successfully!
@@ -193,6 +223,12 @@ export default function Contact() {
                   </span>
                 )}
               </button>
+
+              {errorMessage && (
+                <div className="rounded-2xl bg-red-50 p-4 text-center text-red-700">
+                  <p className="font-semibold">{errorMessage}</p>
+                </div>
+              )}
 
               {isSubmitted && (
                 <div className="animate-pulse rounded-2xl bg-green-50 p-4 text-center text-green-700">

@@ -17,16 +17,36 @@ export default function Newsletter() {
       return;
     }
 
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setMessage('Please enter a valid email address');
+      return;
+    }
+
     setIsLoading(true);
     setMessage('');
 
     try {
-      // Simulate API call - replace with actual endpoint
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setMessage('✓ Successfully subscribed!');
-      setEmail('');
-      setTimeout(() => setMessage(''), 3000);
-    } catch {
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setMessage('✓ Successfully subscribed! Check your email.');
+        setEmail('');
+        setTimeout(() => setMessage(''), 4000);
+      } else {
+        setMessage(data.error || 'Failed to subscribe. Please try again.');
+      }
+    } catch (error) {
+      console.error('Newsletter subscription error:', error);
       setMessage('Failed to subscribe. Please try again.');
     } finally {
       setIsLoading(false);
