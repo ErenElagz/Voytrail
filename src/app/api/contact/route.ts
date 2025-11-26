@@ -8,18 +8,12 @@ export async function POST(req: Request) {
 
     // Validate inputs
     if (!name || !email || !message) {
-      return new Response(
-        JSON.stringify({ error: 'All fields are required' }),
-        { status: 400 }
-      );
+      return new Response(JSON.stringify({ error: 'All fields are required' }), { status: 400 });
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      return new Response(
-        JSON.stringify({ error: 'Invalid email address' }),
-        { status: 400 }
-      );
+      return new Response(JSON.stringify({ error: 'Invalid email address' }), { status: 400 });
     }
 
     // Send email to admin
@@ -112,16 +106,10 @@ export async function POST(req: Request) {
       // Don't throw - admin email was sent successfully
     }
 
-    return new Response(
-      JSON.stringify({ message: 'Message sent successfully!' }),
-      { status: 200 }
-    );
+    return new Response(JSON.stringify({ message: 'Message sent successfully!' }), { status: 200 });
   } catch (error) {
     console.error('Contact API error:', error);
-    return new Response(
-      JSON.stringify({ error: 'Failed to send message' }),
-      { status: 500 }
-    );
+    return new Response(JSON.stringify({ error: 'Failed to send message' }), { status: 500 });
   }
 }
 
