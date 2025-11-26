@@ -8,19 +8,17 @@ export default function Videos() {
       <h2 className="text-3xl font-bold tracking-tight text-black mb-8">Watch How it Works</h2>
 
       <div className="flex flex-col md:flex-row gap-4">
-        <div className="w-full md:w-1/3 flex flex-col gap-4">
-          <div className="rounded-3xl overflow-hidden aspect-video">
-            <ReactPlayer
-              src={'https://www.youtube.com/watch?v=LXb3EKWsInQ'}
-              controls
-              light
-              style={{
-                width: '100%',
-                height: 'auto',
-                aspectRatio: '16/9',
-              }}
-            />
-          </div>
+        <div className="w-full flex flex-col gap-4 h-128">
+          <ReactPlayer
+            src={'https://www.youtube.com/watch?v='}
+            controls
+            light
+            style={{
+              width: '100%',
+              height: '100%',
+              aspectRatio: '16/9',
+            }}
+          />
         </div>
       </div>
     </div>

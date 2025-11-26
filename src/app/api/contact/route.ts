@@ -19,7 +19,7 @@ export async function POST(req: Request) {
     // Send email to admin
     await resend.emails.send({
       from: 'Contact Form <onboarding@resend.dev>',
-      to: process.env.ADMIN_EMAIL || 'info@voytrail.com',
+      to: 'info@voytrail.com',
       replyTo: email,
       subject: `New Contact Form Submission from ${name}`,
       html: `

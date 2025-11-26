@@ -159,9 +159,9 @@ export default function Contact() {
           </div>
 
           {/* Right Side - Contact Form */}
-          <div className="rounded-3xl border-2 border-zinc-200 bg-white p-6 md:p-8">
+          <div className="rounded-3xl border-2 border-zinc-200 bg-white p-6">
             <h3 className="mb-6 text-2xl font-bold text-zinc-900">Send us a message</h3>
-            <form onSubmit={handleSubmit} className="space-y-2 md:space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-2">
               <div>
                 <input
                   type="text"
